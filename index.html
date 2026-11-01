@@ -215,6 +215,14 @@ header.fijo .btn{margin:8px var(--m) 8px auto;min-height:44px;font-size:var(--t-
 .quien .parr{font-size:var(--t-l);line-height:1.5;max-width:46ch}
 .quien .parr strong{font-weight:700}
 .quien .firma{margin-top:26px;font-size:var(--t-s);color:var(--muted)}
+.quien .socios{margin-top:80px;display:grid;grid-template-columns:repeat(3,minmax(0,220px));gap:40px;justify-content:center}
+.quien .socio{text-align:center;margin:0}
+.quien .socio img{width:100%;aspect-ratio:4/5;height:auto;object-fit:cover;object-position:50% 20%;border-radius:var(--r);display:block}
+.quien .socio figcaption{margin-top:14px;display:grid;gap:2px}
+.quien .socio figcaption b{font-weight:700}
+.quien .socio figcaption span{font-size:var(--t-s);color:var(--muted)}
+.quien .socio.vacio{visibility:hidden}
+@media (max-width:640px){.quien .socios{grid-template-columns:minmax(0,240px)}.quien .socio.vacio{display:none}}
 .quien .fila2{margin-top:96px}
 .quien .fila2 .pal{font-size:var(--t-s);font-weight:600}
 .quien .cols{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:0 64px}
@@ -478,6 +486,11 @@ footer .legal{font-size:var(--t-s);margin-top:20px;padding-right:72px;display:fl
       <p class="parr rv" style="margin-top:18px"><b>Automatizamos lo repetitivo para dedicarte el tiempo a ti.</b> Nuestros sistemas revisan tu buzón SOL cada día, controlan tus vencimientos y te avisan antes de cada fecha, así que nada depende de la memoria de nadie. Y trabajamos tu contabilidad sobre la base de las NIIF, para que tus números estén en orden de verdad. Nuestra meta es simple: que nunca más te enteres de una multa por sorpresa.</p>
       <p class="firma rv">PHD CONSULTORES S.A.C. · RUC 20612286575</p>
     </div>
+  </div>
+  <div class="socios rv" aria-label="Socios fundadores">
+    <figure class="socio vacio" aria-hidden="true"></figure>
+    <figure class="socio"><img src="img/fotos/italo-800.webp" alt="Italo Bambarén, socio fundador de PHD Consultores" width="800" height="800" loading="lazy"><figcaption><b>Italo Bambarén</b><span>Socio fundador</span></figcaption></figure>
+    <figure class="socio vacio" aria-hidden="true"></figure>
   </div>
   <div class="fila fila2">
     <div class="pal rv">Servicios y recursos</div>
