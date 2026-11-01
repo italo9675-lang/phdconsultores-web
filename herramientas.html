@@ -151,7 +151,7 @@
   function multa(){
     var reg = document.getElementById("m-reg").value, ing = +document.getElementById("m-ing").value, out = document.getElementById("m-res");
     if (reg === "nrus"){
-      out.innerHTML = '<small>En el Nuevo RUS la multa se calcula sobre tu categoría y es mucho menor que en los otros regímenes.</small><div class="grande">Desde S/ 120</div><p><small>Si regularizas antes de que SUNAT te notifique, la rebaja también puede ser total.</small></p><a target="_blank" rel="noopener" href="' + P.wa("Hola PHD, estoy en el NRUS y no declaré a tiempo. ¿Me ayudan a regularizar?") + '">Te ayudamos a regularizar</a>';
+      out.innerHTML = '<p>En el Nuevo RUS la multa se calcula según tu categoría y es mucho menor que en los otros regímenes. Si regularizas antes de que SUNAT te notifique, la rebaja también puede ser total.</p><a target="_blank" rel="noopener" href="' + P.wa("Hola PHD, estoy en el NRUS y no declaré a tiempo. ¿Me ayudan a regularizar?") + '">Te ayudamos a regularizar</a>';
       return;
     }
     var base = reg === "rer" ? UIT * 0.5 : UIT;
