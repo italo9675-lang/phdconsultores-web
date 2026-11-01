@@ -4,19 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PHD Consultores · Contabilidad para emprendedores y mypes en Lima</title>
-<meta name="description" content="Contador para emprendedores y mypes en Lima. Declaraciones SUNAT, SIRE, planillas y buzón SOL revisado a diario. Planes desde S/ 150 + IGV. Diagnóstico gratuito por WhatsApp.">
+<meta name="description" content="Estudio contable para emprendedores y mypes en Lima. Declaraciones SUNAT, SIRE, planillas y buzón SOL revisado a diario. Planes desde S/ 150 + IGV. Diagnóstico gratuito.">
 <link rel="canonical" href="https://phdconsultores.pe/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_PE">
 <meta property="og:url" content="https://phdconsultores.pe/">
-<meta property="og:title" content="PHD Consultores · Tu contabilidad al día con SUNAT">
+<meta property="og:title" content="PHD Consultores · Tu negocio, al día con SUNAT">
 <meta property="og:description" content="Declaramos por ti, revisamos tu buzón SOL cada día y te avisamos antes de cada vencimiento. Diagnóstico gratuito.">
 <meta property="og:image" content="https://phdconsultores.pe/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#405e56">
+<meta name="theme-color" content="#1c2925">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" as="image" href="img/fotos/cover_vie-1200.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,577 +23,498 @@
 {"@context":"https://schema.org","@type":"AccountingService","name":"PHD Consultores","legalName":"PHD CONSULTORES S.A.C.","taxID":"20612286575","url":"https://phdconsultores.pe/","telephone":"+51943864787","image":"https://phdconsultores.pe/og.png","logo":"https://phdconsultores.pe/img/isotipo-512.png","priceRange":"S/ 150 – S/ 500+","areaServed":{"@type":"City","name":"Lima"},"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"description":"Contabilidad y tributación para emprendedores y mypes: declaraciones SUNAT, SIRE, planillas, revisión de buzón SOL y formalización."}
 </script>
 <style>
+/* Dirección: «el informe impreso». Un eje vertical al 42 %, mosaicos sin junta y páginas enteras de color. */
 :root{
-  --ink:#1c2925; --ink2:#24342f; --sage:#405e56; --sage-d:#334c45; --sage-l:#5b7a71; --mist:#9ba69e; --fog:#dfe5e0;
-  --paper:#f2f5f2; --white:#fff; --graphite:#4d4d4d; --amber:#e0a526; --red:#b5432f;
-  --wrap:1180px; --ease:cubic-bezier(.22,.8,.24,1);
-  --sans:"Montserrat",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --ink:#1c2925; --ink2:#24342f; --sage:#405e56; --sage-d:#334c45; --mist:#9ba69e; --fog:#dfe5e0;
+  --paper:#f2f5f2; --white:#fff; --muted:#4d5651; --amber:#e0a526; --red:#b5432f;
+  --eje:42vw; --m:clamp(16px,3.2vw,48px); --r:8px;
+  --ease-out:cubic-bezier(.23,1,.32,1); --ease-io:cubic-bezier(.77,0,.175,1);
+  --sans:"Montserrat",system-ui,sans-serif; --mono:"Montserrat",system-ui,sans-serif;
+  /* escala de cinco pasos */
+  --t-s:14px; --t-b:17px; --t-l:clamp(19px,1.5vw,22px); --t-h:clamp(30px,3vw,44px); --t-d:clamp(48px,5.8vw,104px);
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-variant-numeric:tabular-nums;margin:0;background:var(--paper);color:var(--ink);font:400 var(--t-b)/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
-a{color:var(--sage)}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
-h1,h2,h3{line-height:1.1;margin:0;letter-spacing:-.025em}
-h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;max-width:20ch}
-.lead{color:var(--graphite);font-size:1.1rem;max-width:56ch;margin:18px 0 0}
-section{padding:110px 0;position:relative}
-@media (max-width:720px){section{padding:76px 0}}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.03em;line-height:1.05}
+p{margin:0}
+.eje{padding-left:var(--eje);padding-right:var(--m)}
+@media (max-width:900px){.eje{padding-left:var(--m)}}
 
-/* aparición al hacer scroll */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+/* entradas: una sola familia de movimiento */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
 .rv.in{opacity:1;transform:none}
-.rv[data-d="1"]{transition-delay:.08s}.rv[data-d="2"]{transition-delay:.16s}.rv[data-d="3"]{transition-delay:.24s}.rv[data-d="4"]{transition-delay:.32s}
+.rv[data-d="1"]{transition-delay:60ms}.rv[data-d="2"]{transition-delay:120ms}.rv[data-d="3"]{transition-delay:180ms}
 
-/* botones */
-.btn{display:inline-flex;align-items:center;gap:.6em;font:700 1rem var(--sans);text-decoration:none;border-radius:999px;padding:1em 1.6em;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,transform .2s var(--ease),box-shadow .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-wa{background:var(--sage);color:#fff;box-shadow:0 12px 24px -12px rgba(64,94,86,.8)}
-.btn-wa:hover{background:var(--sage-d)}
-.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
-.btn-line:hover{background:var(--ink);color:#fff}
-.btn-light{background:#fff;color:var(--ink)}
-.btn svg{width:1.2em;height:1.2em;flex:none}
-
-/* cabecera */
-header{position:fixed;inset:0 0 auto;z-index:40;transition:background .3s,box-shadow .3s,height .3s}
-header.solid{background:rgba(242,245,242,.9);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--fog)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px;transition:height .3s}
-header.solid .bar{height:64px}
-.logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
-.logo b{font-weight:500;color:var(--graphite)}
-.logo img{height:50px;width:auto;transition:height .3s}
-header.solid .logo img{height:42px}
-nav{display:flex;gap:28px;align-items:center}
-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;position:relative}
-nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--sage);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
-nav a:not(.btn):hover::after{transform:scaleX(1)}
-nav .btn{padding:.65em 1.2em;font-size:.92rem}
-@media (max-width:860px){nav a:not(.btn){display:none}}
-
-/* HERO */
-.hero{padding:140px 0 90px;overflow:hidden}
-.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.hero h1{font-size:clamp(2.4rem,4.3vw,3.8rem);font-weight:800}
-@media (min-width:961px){.hero h1 .ln{white-space:nowrap}}
-.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
-.hero h1 .ln span{display:block;transform:translateY(105%);animation:sube 1s var(--ease) forwards}
-.hero h1 .ln:nth-child(2) span{animation-delay:.1s}.hero h1 .ln:nth-child(3) span{animation-delay:.2s}
-@keyframes sube{to{transform:none}}
-.hero .lead{font-size:1.18rem;margin:26px 0 34px;opacity:0;animation:aparece .9s .45s var(--ease) forwards}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;opacity:0;animation:aparece .9s .6s var(--ease) forwards}
-@keyframes aparece{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.trust{display:flex;flex-wrap:wrap;gap:8px 24px;margin:34px 0 0;padding:0;list-style:none;color:var(--graphite);font-size:.93rem;font-weight:500;opacity:0;animation:aparece .9s .75s var(--ease) forwards}
-.trust li{display:flex;gap:8px;align-items:center}
-.trust svg{width:18px;height:18px;color:var(--sage)}
-
-.foto-hero{position:relative;aspect-ratio:4/5;max-height:640px;justify-self:end;width:100%}
-.foto-hero .marco{position:absolute;inset:0;border-radius:200px 200px 28px 28px;overflow:hidden;clip-path:inset(100% 0 0 0 round 200px 200px 28px 28px);animation:revela 1.3s .15s var(--ease) forwards;background:var(--fog)}
-@keyframes revela{to{clip-path:inset(0 0 0 0 round 200px 200px 28px 28px)}}
-.foto-hero img{width:100%;height:115%;object-fit:cover;transform:translateY(var(--py,0px)) scale(1.06);will-change:transform}
-.chip{position:absolute;background:#fff;border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 24px 48px -20px rgba(28,41,37,.45);font-size:.88rem;line-height:1.35;opacity:0;animation:flota-in .8s var(--ease) forwards}
-.chip b{display:block;font-size:.92rem}
-.chip small{color:var(--graphite)}
-.chip .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none}
-.chip .ic svg{width:20px;height:20px}
-.chip.c1{left:-46px;top:16%;animation-delay:1.1s}
-.chip.c1 .ic{background:#e3efe9;color:var(--sage)}
-.chip.c2{right:-26px;bottom:14%;animation-delay:1.35s}
-.chip.c2 .ic{background:#fbf0d4;color:#9a6a00}
-.chip.c3{left:8%;bottom:-22px;animation-delay:1.6s;background:var(--ink);color:#fff}
-.chip.c3 small{color:var(--mist)}
-.chip.c3 .ic{background:#2e443d;color:#fff}
-@keyframes flota-in{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
-.chip{animation-name:flota-in}
-.chip.vivo{animation:flotar 6s ease-in-out infinite}
-@keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@media (max-width:960px){
-  .hero{padding:110px 0 70px}
-  .hero .grid{grid-template-columns:1fr;gap:56px}
-  .foto-hero{justify-self:center;max-width:460px}
-  .chip.c1{left:-8px}.chip.c2{right:-8px}
+/* botones: una sola forma */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:0 1.5em;border-radius:var(--r);border:0;font:700 1rem var(--sans);text-decoration:none;cursor:pointer;transition:transform .16s var(--ease-out),background-color .2s ease,color .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-sage{background:var(--sage);color:#fff}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-paper{background:#fff;color:var(--ink)}
+@media (hover:hover) and (pointer:fine){
+  .btn-ink:hover{background:var(--sage-d)} .btn-sage:hover{background:var(--sage-d)} .btn-amber:hover{background:#ecb53f} .btn-paper:hover{background:var(--fog)}
 }
-@media (max-width:480px){.chip{font-size:.8rem;padding:10px 12px}.chip .ic{width:32px;height:32px}}
+.btn svg{width:1.15em;height:1.15em}
 
-/* CINTA */
-.cinta{background:var(--ink);color:#cfd9d3;overflow:hidden;padding:18px 0;white-space:nowrap}
-.cinta .pista{display:inline-flex;gap:48px;animation:cinta 38s linear infinite;font-weight:600;font-size:.95rem}
-.cinta span{display:inline-flex;align-items:center;gap:48px}
-.cinta span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber)}
-@keyframes cinta{to{transform:translateX(-50%)}}
+/* ===== MASTHEAD ===== */
+.mast{position:relative;height:56svh;min-height:380px;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr}
+.mast>*{min-width:0;min-height:0;overflow:hidden}
+.mast img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.mast .t-sage{background:var(--sage)} .mast .t-ink{background:var(--ink)} .mast .t-amber{background:var(--amber)} .mast .t-fog{background:var(--fog)}
+.mast .c1{grid-column:1/3;grid-row:1}
+.mast .c2{grid-column:3;grid-row:1/3;display:grid;place-items:center}
+.mast .c2 img{width:46%;height:auto;filter:none;object-fit:contain}
+.mast .c3{grid-column:4/5;grid-row:1}
+.mast .c4{grid-column:5/7;grid-row:1}
+.mast .c5{grid-column:1;grid-row:2}
+.mast .c6{grid-column:2;grid-row:2}
+.mast .c7{grid-column:4/6;grid-row:2}
+.mast .c8{grid-column:6;grid-row:2;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:18px;color:var(--ink);font:600 var(--t-s)/1.3 var(--sans)}
+.mast .c8 b{font-size:var(--t-h);line-height:1;letter-spacing:-.04em;font-weight:700}
+.mast .tile{opacity:0;transform:scale(1.04);animation:baldosa .9s var(--ease-out) forwards}
+.mast .tile:nth-child(2){animation-delay:40ms}.mast .tile:nth-child(3){animation-delay:80ms}.mast .tile:nth-child(4){animation-delay:120ms}.mast .tile:nth-child(5){animation-delay:160ms}.mast .tile:nth-child(6){animation-delay:200ms}.mast .tile:nth-child(7){animation-delay:240ms}.mast .tile:nth-child(8){animation-delay:280ms}
+@keyframes baldosa{to{opacity:1;transform:none}}
 
-/* CALCULADORA */
-.calc{background:var(--sage);color:#fff;overflow:hidden}
-.calc .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
-.calc h2{color:#fff}
-.calc .lead{color:#d6e0da}
-.calc .bg{position:absolute;right:-80px;top:-60px;width:520px;opacity:.07;pointer-events:none}
-.venc{background:var(--ink);border-radius:28px;padding:34px;box-shadow:0 40px 80px -40px rgba(0,0,0,.6);position:relative}
-.venc .sub{color:var(--mist);margin:0 0 18px;font-size:.95rem}
-.keys{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.keys button{font:600 1.8rem var(--mono);aspect-ratio:1/1;border-radius:16px;border:1.5px solid #3b4d47;background:var(--ink2);color:#fff;cursor:pointer;transition:background .15s,border-color .15s,transform .15s var(--ease)}
-.keys button:hover{border-color:var(--mist);transform:translateY(-2px)}
-.keys button[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--ink);transform:scale(1.04)}
-.res{margin-top:24px;min-height:150px;border-top:1px solid #34463f;padding-top:22px}
-.res .vacio{color:var(--mist);font-size:.95rem;margin:0}
-.res .periodo{color:var(--mist);font-size:.92rem}
-.res .fecha{font:600 clamp(1.5rem,3.2vw,2.1rem)/1.15 var(--mono);margin:6px 0 10px;letter-spacing:-.02em}
-.res .nuevo{animation:aparece .5s var(--ease)}
-.res .faltan{display:inline-flex;align-items:baseline;gap:6px;font-weight:700;font-size:.92rem;padding:.35em .85em;border-radius:999px;background:#2e443d;color:#d9e6df}
-.res .faltan .n{font-family:var(--mono);font-size:1.1rem}
-.res .faltan.pronto{background:var(--amber);color:var(--ink)}
-.res .luego{margin:16px 0 0;padding:0;list-style:none;font-size:.88rem;color:var(--mist);display:flex;gap:18px;flex-wrap:wrap}
+header.cab{position:absolute;inset:0 0 auto;z-index:20;display:flex;height:64px;align-items:stretch}
+.cab .marca{background:var(--ink);display:flex;align-items:center;padding:0 22px}
+.cab .marca img{height:38px;width:auto}
+.cab .tab{background:var(--amber);display:flex;align-items:center;gap:26px;padding:0 24px;width:calc(var(--eje) - 196px);min-width:max-content}
+.cab .tab a{font-weight:600;font-size:var(--t-s);text-decoration:none;color:var(--ink)}
+.cab .tab a:hover{text-decoration:underline;text-underline-offset:4px}
+.cab .acc{margin-left:auto;display:flex;align-items:center;padding-right:var(--m)}
+.cab .acc .btn{min-height:44px;font-size:var(--t-s)}
+header.fijo{position:fixed;inset:0 0 auto;z-index:40;height:60px;display:flex;align-items:stretch;transform:translateY(-100%);transition:transform .35s var(--ease-out);background:var(--paper);box-shadow:0 1px 0 var(--fog)}
+header.fijo.on{transform:none}
+header.fijo .marca{background:var(--ink);display:flex;align-items:center;padding:0 18px}
+header.fijo .marca img{height:32px}
+header.fijo nav{display:flex;align-items:center;gap:24px;padding:0 24px}
+header.fijo nav a{font-weight:600;font-size:var(--t-s);text-decoration:none}
+header.fijo .btn{margin:8px var(--m) 8px auto;min-height:44px;font-size:var(--t-s)}
+@media (max-width:900px){
+  .cab .tab,header.fijo nav{display:none}
+  .mast{height:40svh;min-height:300px;grid-template-columns:repeat(3,1fr)}
+  .mast .c1{grid-column:1/3;grid-row:1}.mast .c2{grid-column:3;grid-row:1/3}.mast .c3{display:none}.mast .c4{display:none}
+  .mast .c5{grid-column:1;grid-row:2}.mast .c6{grid-column:2;grid-row:2}.mast .c7{display:none}.mast .c8{display:none}
+}
+
+.hero{padding:clamp(56px,8vw,110px) 0 clamp(64px,8vw,120px);display:grid;grid-template-columns:var(--eje) 1fr;align-items:end;gap:0}
+.hero .standfirst{padding:0 var(--m);font-size:var(--t-l);line-height:1.45;max-width:30ch;color:var(--ink)}
+.hero h1{font-size:var(--t-d);font-weight:500;letter-spacing:-.06em;line-height:.95;padding-right:var(--m)}
+@media (min-width:901px){.hero h1 .ln{white-space:nowrap}}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln span{display:block;transform:translateY(110%);animation:sube .9s var(--ease-out) forwards}
+.hero h1 .ln:nth-child(2) span{animation-delay:110ms}
+@keyframes sube{to{transform:none}}
+.hero .ctas{grid-column:2;display:flex;flex-wrap:wrap;gap:12px;margin-top:40px;opacity:0;animation:aparece .7s .5s var(--ease-out) forwards}
+.hero .standfirst{opacity:0;animation:aparece .7s .5s var(--ease-out) forwards}
+.hero .ctas a.link{align-self:center;font-weight:700;text-underline-offset:5px;text-decoration-thickness:2px}
+@keyframes aparece{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:40px}
+  .hero h1{font-size:11vw;padding:0 var(--m);order:-1}
+  .hero .standfirst{margin-top:24px;font-size:var(--t-b)}
+  .hero .ctas{grid-column:1;padding:0 var(--m);margin-top:28px}
+}
+
+/* ===== CALCULADORA: placa cuadrada ===== */
+.plate{display:grid;grid-template-columns:1.1fr 1fr;min-height:88svh;background:var(--ink);color:#fff}
+.plate .izq{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px}
+.plate .izq .fuente{width:100%;max-width:620px}
+.plate .cuadro{width:100%;max-width:620px;aspect-ratio:1/1;background:var(--sage);padding:clamp(24px,3.4vw,48px);display:flex;flex-direction:column;justify-content:space-between}
+.plate .fecha{font:600 var(--t-d)/.95 var(--sans);letter-spacing:-.05em}
+.plate .sub{font-size:var(--t-l);line-height:1.4;margin-top:16px;color:#e6eee9;max-width:30ch}
+.plate .faltan{display:inline-flex;align-items:baseline;gap:8px;font-weight:700;font-size:var(--t-s);padding:.45em .9em;border-radius:var(--r);background:var(--ink);color:#fff;align-self:flex-start}
+.plate .faltan .n{font-family:var(--mono);font-size:1.15rem}
+.plate .faltan.pronto{background:var(--amber);color:var(--ink)}
+.plate .der{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(40px,6vw,88px) var(--m) 40px clamp(24px,4vw,64px)}
+.plate h2{font-size:var(--t-h)}
+.plate .desc{color:#c9d5cf;max-width:34ch;margin-top:20px;font-size:var(--t-l);line-height:1.45}
+.keys{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:36px 0}
+.keys button{font:600 var(--t-l) var(--sans);aspect-ratio:1/1;border-radius:var(--r);border:0;background:var(--ink2);color:#fff;cursor:pointer;transition:background-color .15s ease,color .15s ease,transform .16s var(--ease-out)}
+.keys button:active{transform:scale(.95)}
+@media (hover:hover) and (pointer:fine){.keys button:hover{background:#2f443d}}
+.keys button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
+.res .luego{list-style:none;padding:0;margin:0;display:flex;gap:22px;flex-wrap:wrap;font-size:var(--t-s);color:#c9d5cf}
 .res .luego span{font-family:var(--mono);color:#fff}
-.res .avisame{display:inline-flex;margin-top:18px;color:var(--amber);font-weight:700;text-decoration:none;font-size:.95rem}
-.res .avisame:hover{text-decoration:underline}
-.fuente{font-size:.78rem;color:#7d8a83;margin:18px 0 0}
-.fuente a{color:#a9b8b0}
-@media (max-width:960px){.calc .grid{grid-template-columns:1fr;gap:40px}}
+.acciones2{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.acciones2 a{min-height:72px;display:flex;align-items:center;padding:0 22px;font-weight:700;text-decoration:none;transition:background-color .2s ease}
+.acciones2 .a1{background:var(--amber);color:var(--ink)}
+.acciones2 .a2{background:var(--ink2);color:#fff}
+@media (hover:hover) and (pointer:fine){.acciones2 .a2:hover{background:#2f443d}}
+.fuente{font-size:var(--t-s);color:#9fb0a8;margin-top:16px}
+.fuente a{color:#c9d5cf}
+@media (max-width:900px){
+  .plate{grid-template-columns:1fr}
+  .plate .der{display:contents}
+  .plate .der>div:first-child{order:1;padding:56px var(--m) 8px}
+  .plate .izq{padding:16px;order:2}
+  .plate .der>div:last-child{order:3;padding:0 16px 40px}
+  .acciones2{grid-template-columns:1fr}
+}
 
-/* DOLOR */
-.dolor .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
-.dolor .foto{position:sticky;top:100px;border-radius:28px;overflow:hidden;aspect-ratio:4/5}
-.dolor .foto img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.6s var(--ease)}
-.dolor .foto.in img{transform:none}
-.dolor .foto figcaption{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(28,41,37,.82);backdrop-filter:blur(6px);color:#fff;border-radius:16px;padding:14px 16px;font-size:.92rem}
-.dolor ul{list-style:none;margin:40px 0 0;padding:0}
-.dolor li{padding:26px 0;border-top:1px solid #cdd6d0;display:grid;grid-template-columns:44px 1fr;gap:18px}
-.dolor li:last-child{border-bottom:1px solid #cdd6d0}
-.dolor li .q{width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--sage)}
-.dolor li .q svg{width:20px;height:20px}
-.dolor li strong{font-size:1.12rem;display:block;margin-bottom:4px}
-.dolor li span{color:var(--graphite)}
-@media (max-width:960px){.dolor .grid{grid-template-columns:1fr;gap:36px}.dolor .foto{position:relative;top:0;max-height:520px}}
+/* ===== MOSAICO DE SERVICIOS ===== */
+.servs{padding:clamp(72px,9vw,140px) var(--m)}
+.mos{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:96px;gap:8px}
+.mos>*{border-radius:var(--r);padding:24px;overflow:hidden;min-width:0}
+.mos .h{grid-column:span 6;grid-row:span 3;background:var(--fog)}
+.mos .h h2{font-size:var(--t-d);font-weight:500;letter-spacing:-.05em;line-height:.95;max-width:9ch}
+.mos .foto{grid-column:span 6;grid-row:span 5;padding:0}
+.mos .foto img{width:100%;height:100%;object-fit:cover}
+.mos .cifra{grid-column:span 3;grid-row:span 3;background:var(--amber);display:flex;flex-direction:column;justify-content:space-between}
+.mos .cifra b{font:600 var(--t-d)/.9 var(--sans);letter-spacing:-.05em}
+.mos .cifra span{font-size:var(--t-s);font-weight:600;max-width:20ch}
+.mos .lista{grid-column:span 3;grid-row:span 3;background:var(--ink);color:#fff}
+.mos .lista ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:var(--t-l);font-weight:600}
+.mos .frase{grid-column:span 6;grid-row:span 2;background:var(--sage);color:#fff;font-size:var(--t-l);font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.mos .frase2{grid-column:span 6;grid-row:span 2;background:#e7ebe6;font-size:var(--t-l);font-weight:600;line-height:1.3;letter-spacing:-.01em}
+.mos .frase small,.mos .frase2 small{display:block;font-size:var(--t-s);font-weight:500;letter-spacing:0;margin-top:10px;opacity:.85}
+.mos a{text-underline-offset:4px}
+@media (max-width:900px){
+  .mos{grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:6px}
+  .mos .h,.mos .foto,.mos .frase,.mos .frase2{grid-column:span 2;grid-row:auto}
+  .mos .foto{aspect-ratio:4/3}
+  .mos .cifra,.mos .lista{grid-column:span 1;grid-row:auto;aspect-ratio:1/1}
+  .mos .lista ul{font-size:var(--t-b)}
+}
 
-/* PARA QUIÉN */
-.quien{background:var(--white)}
-.tarjetas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
-.tarjeta{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;color:#fff;text-decoration:none;display:flex;align-items:flex-end;isolation:isolate}
-.tarjeta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s var(--ease)}
-.tarjeta::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(28,41,37,0) 35%,rgba(28,41,37,.92) 100%)}
-.tarjeta:hover img{transform:scale(1.06)}
-.tarjeta .t{padding:26px}
-.tarjeta .plan{display:inline-block;font-size:.8rem;font-weight:700;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border-radius:999px;padding:.3em .85em;margin-bottom:12px}
-.tarjeta h3{font-size:1.45rem;font-weight:800}
-.tarjeta p{margin:8px 0 0;color:#dbe4de;font-size:.96rem}
-.tarjeta .ir{display:inline-flex;margin-top:14px;font-weight:700;font-size:.92rem;border-bottom:2px solid var(--amber);padding-bottom:2px}
-@media (max-width:900px){.tarjetas{grid-template-columns:1fr}.tarjeta{aspect-ratio:4/3}}
+/* ===== CÓMO TRABAJAMOS: muchos en uno ===== */
+.como{padding:clamp(72px,9vw,140px) var(--m);background:var(--white)}
+.como .top{display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr}
+.como .top h2{font-size:var(--t-h);max-width:12ch}
+.como .top p{font-size:var(--t-l);line-height:1.45;color:var(--muted);max-width:44ch}
+.como svg{width:100%;height:auto;display:block;margin:56px 0 36px}
+.como svg rect{transition:transform 1.2s var(--ease-io),fill .6s ease;transform-box:fill-box}
+.como .tres{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.como .tres b{display:block;font-size:var(--t-l);margin-bottom:6px}
+.como .tres p{color:var(--muted)}
+@media (max-width:900px){.como .top{grid-template-columns:1fr}.como .top h2,.como .top p{grid-column:auto}.como .tres{grid-template-columns:1fr;gap:22px}}
 
-/* PASOS (secuencia real) */
-.pasos{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:60px}
-.pasos .linea{position:absolute;top:27px;left:28px;right:28px;height:3px;background:var(--fog);border-radius:3px;overflow:hidden}
-.pasos .linea i{display:block;height:100%;width:100%;background:var(--sage);transform:scaleX(0);transform-origin:left;transition:transform 1.6s var(--ease)}
-.pasos.in .linea i{transform:scaleX(1)}
-.paso{position:relative;padding-top:80px}
-.paso .num{position:absolute;top:0;left:0;width:56px;height:56px;border-radius:50%;background:var(--paper);border:3px solid var(--fog);display:grid;place-items:center;font:600 1.2rem var(--mono);color:var(--graphite);transition:background .4s,border-color .4s,color .4s}
-.pasos.in .paso .num{background:var(--sage);border-color:var(--sage);color:#fff}
-.pasos.in .paso:nth-child(3) .num{transition-delay:.5s}.pasos.in .paso:nth-child(4) .num{transition-delay:1s}
-.paso h3{font-size:1.25rem;font-weight:700;margin-bottom:8px}
-.paso p{margin:0;color:var(--graphite)}
-@media (max-width:820px){.pasos{grid-template-columns:1fr;gap:10px}.pasos .linea{top:28px;bottom:28px;left:26px;right:auto;width:3px;height:auto}.pasos .linea i{transform:scaleY(0);transform-origin:top}.pasos.in .linea i{transform:scaleY(1)}.paso{padding:0 0 30px 84px;min-height:80px}}
+/* ===== QUIÉN ESTÁ DETRÁS ===== */
+.quien{padding:clamp(72px,9vw,140px) var(--m)}
+.quien .fila{display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr;gap:0}
+.quien .datos{display:grid;gap:22px;align-content:start;font-size:var(--t-s)}
+.quien .datos span{display:block;color:var(--muted)}
+.quien .datos b{font-weight:600}
+.quien .foto{width:220px;margin-bottom:28px}
+.quien .foto img{width:220px;height:275px;object-fit:cover;object-position:50% 20%;border-radius:var(--r)}
+.quien .parr{font-size:var(--t-l);line-height:1.5;max-width:46ch}
+.quien .parr strong{font-weight:700}
+.quien .firma{margin-top:26px;font-size:var(--t-s);color:var(--muted)}
+.quien .fila2{margin-top:96px}
+.quien .fila2 .pal{font-size:var(--t-s);font-weight:600}
+.quien .cols{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:0 64px}
+.quien .cols ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:var(--t-s)}
+.quien .cols li{display:flex;justify-content:space-between;gap:16px}
+.quien .cols li span:last-child{color:var(--muted)}
+.quien .cols a{text-decoration:none}
+.quien .cols a:hover{text-decoration:underline}
+@media (max-width:900px){.quien .fila{grid-template-columns:1fr;gap:32px}.quien .cols{grid-template-columns:1fr;gap:32px}.quien .fila2{margin-top:56px}}
 
-/* TECNOLOGÍA */
-.tec{background:var(--ink);color:#fff;overflow:hidden}
-.tec h2{color:#fff}
-.tec .lead{color:#b9c5be}
-.tec .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.tec ul.tec-l{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:22px}
-.tec ul.tec-l li{display:grid;grid-template-columns:44px 1fr;gap:16px}
-.tec ul.tec-l .ic{width:44px;height:44px;border-radius:12px;background:#2e443d;display:grid;place-items:center;color:#cfe3d8}
-.tec ul.tec-l img.ic{background:none;border-radius:50%;padding:0}
-.tec ul.tec-l .ic svg{width:22px;height:22px}
-.tec ul.tec-l b{display:block;font-size:1.06rem}
-.tec ul.tec-l span{color:#b9c5be;font-size:.95rem}
-.escena{position:relative;height:560px}
-.escena .foto{position:absolute;right:0;top:0;width:72%;height:88%;border-radius:28px;overflow:hidden}
-.escena .foto img{width:100%;height:100%;object-fit:cover;opacity:.85}
-.telefono{position:absolute;left:0;bottom:0;width:270px;background:#0f1715;border-radius:36px;padding:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);border:1px solid #2c3a35}
-.telefono .pant{background:#e9eee9;border-radius:26px;padding:16px 12px 18px;min-height:380px;display:flex;flex-direction:column;gap:10px}
-.telefono .top{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;color:var(--ink);padding:0 4px 8px;border-bottom:1px solid #d5ddd7}
-.telefono .top img{width:24px;height:24px}
-.msg{background:#fff;color:var(--ink);border-radius:14px 14px 14px 4px;padding:10px 12px;font-size:.78rem;line-height:1.4;box-shadow:0 2px 0 rgba(0,0,0,.04);opacity:0;transform:translateY(12px)}
-.msg b{display:block;font-size:.8rem;margin-bottom:2px}
-.msg .h{display:block;text-align:right;font-size:.66rem;color:#8a968f;margin-top:4px}
-.escena.in .msg{animation:aparece .6s var(--ease) forwards}
-.escena.in .msg:nth-child(3){animation-delay:.6s}.escena.in .msg:nth-child(4){animation-delay:1.4s}.escena.in .msg:nth-child(5){animation-delay:2.2s}
-@media (max-width:960px){.tec .grid{grid-template-columns:1fr;gap:48px}.escena{height:520px;max-width:520px}}
-@media (max-width:480px){.telefono{width:236px}.escena .foto{width:80%}}
-
-
-/* QUIÉN ESTÁ DETRÁS */
-.yo .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
-.yo .foto{position:relative;max-width:420px}
-.yo .foto::before{content:"";position:absolute;inset:24px -24px -24px 24px;border-radius:200px 200px 28px 28px;background:var(--sage)}
-.yo .foto img{position:relative;border-radius:200px 200px 28px 28px;aspect-ratio:4/5;object-fit:cover;width:100%}
-.yo .firma{margin-top:26px;font-weight:700;font-size:1.05rem}
-.yo .firma small{display:block;font-weight:500;color:var(--graphite);font-size:.92rem}
-.yo ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
-.yo li{padding-left:30px;position:relative}
-.yo li::before{content:"";position:absolute;left:4px;top:.5em;width:12px;height:7px;border-left:2.5px solid var(--sage);border-bottom:2.5px solid var(--sage);transform:rotate(-45deg)}
-.yo blockquote{margin:28px 0 0;padding:0 0 0 20px;border-left:3px solid var(--amber);font-size:1.12rem;font-weight:600;color:var(--ink);max-width:52ch}
-@media (max-width:900px){.yo .grid{grid-template-columns:1fr;gap:56px}.yo .foto{max-width:320px;margin:0 auto}}
-
-/* PLANES */
-.planes .cab{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
-.toggle{display:inline-flex;background:#fff;border-radius:999px;padding:5px;border:1px solid var(--fog)}
-.toggle button{font:600 .9rem var(--sans);border:0;background:transparent;padding:.6em 1.1em;border-radius:999px;cursor:pointer;color:var(--graphite)}
+/* ===== PLANES: campos de color ===== */
+.planes .intro{padding:clamp(72px,9vw,120px) var(--m) 48px;display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr;align-items:end}
+.planes .intro h2{font-size:var(--t-h);padding-right:24px}
+.planes .intro .der{display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.planes .intro p{color:var(--muted);max-width:44ch}
+.toggle{display:inline-flex;background:#fff;border-radius:var(--r);padding:4px}
+.toggle button{font:600 var(--t-s) var(--sans);border:0;background:transparent;padding:.6em 1.1em;border-radius:6px;cursor:pointer;color:var(--muted);transition:background-color .2s ease,color .2s ease}
 .toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
-.planes .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:stretch}
-.plan{background:var(--white);border:1.5px solid var(--fog);border-radius:24px;padding:32px;display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s}
-.plan:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(28,41,37,.35)}
-.plan.dest{background:var(--ink);color:#fff;border-color:var(--ink)}
-.plan.dest .para,.plan.dest .precio small{color:#b9c5be}
-.plan.dest li::before{border-color:var(--amber)}
-.plan .tag{align-self:flex-start;font-size:.8rem;font-weight:700;background:var(--amber);color:var(--ink);border-radius:999px;padding:.3em .85em;margin-bottom:14px}
-.plan h3{font-size:1.4rem;font-weight:800}
-.plan .para{color:var(--graphite);font-size:.95rem;margin:6px 0 22px;min-height:3em}
-.plan .precio{font:600 2.5rem/1 var(--mono);letter-spacing:-.03em}
-.plan .precio small{font:500 .88rem var(--sans);color:var(--graphite);letter-spacing:0}
-.plan ul{list-style:none;padding:0;margin:24px 0 28px;display:grid;gap:11px;flex:1}
-.plan li{padding-left:26px;position:relative;font-size:.96rem}
-.plan li::before{content:"";position:absolute;left:2px;top:.45em;width:12px;height:7px;border-left:2.5px solid var(--sage);border-bottom:2.5px solid var(--sage);transform:rotate(-45deg)}
-.plan .btn{justify-content:center}
-.plan.dest .btn-wa{background:var(--amber);color:var(--ink);box-shadow:none}
-.nota{color:var(--graphite);font-size:.92rem;margin-top:24px}
-@media (max-width:960px){.planes .grid{grid-template-columns:1fr}}
+.campos{display:grid;grid-template-columns:4fr 5fr 3fr}
+.campo{min-height:80svh;padding:40px;display:flex;flex-direction:column}
+.campo h3{font-size:var(--t-d);font-weight:500;letter-spacing:-.05em;line-height:.95}
+.campo .para{font-size:var(--t-l);max-width:26ch;margin-top:14px;line-height:1.4}
+.campo .incl{max-width:38ch;margin-top:auto;padding-top:40px;font-size:var(--t-b);line-height:1.55}
+.campo .pie{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:28px;flex-wrap:wrap}
+.campo .precio{font:600 var(--t-d)/.9 var(--sans);letter-spacing:-.05em}
+.campo .precio small{font:500 var(--t-s) var(--sans);letter-spacing:0;display:block;margin-top:10px}
+.campo .desde{display:block;font:500 var(--t-s) var(--sans);letter-spacing:0;margin-bottom:6px}
+.c-es{background:var(--fog);color:var(--ink)}
+.c-cr{background:var(--sage);color:#fff}
+.c-em{background:var(--ink);color:#fff}
+@media (min-width:601px) and (max-width:1000px){.campo{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}.campo h3,.campo .para{grid-column:1}.campo .incl{grid-column:2;grid-row:1/3;padding-top:0;margin-top:0}.campo .pie{grid-column:2}}
+@media (max-width:1000px){.campos{grid-template-columns:1fr}.campo{min-height:auto;padding:40px var(--m) 40px}.campo .pie{flex-direction:column;align-items:flex-start}.campo .incl{padding-top:28px}.c-cr{order:-1}.planes .intro{grid-template-columns:1fr;gap:24px}}
 
-
-/* COTIZADOR */
-.cotiz{background:#fff;border:1.5px solid var(--fog);border-radius:24px;padding:30px;margin-top:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start}
-.cotiz h3{font-size:1.3rem;font-weight:800}
-.cotiz .p{margin:20px 0 0}
-.cotiz .p>b{display:block;font-size:.95rem;margin-bottom:10px}
+/* cotizador */
+.cotiz{display:grid;grid-template-columns:var(--eje) 1fr;padding:clamp(56px,7vw,96px) var(--m) clamp(56px,7vw,96px) 0;background:var(--white)}
+.cotiz .lbl{padding:0 var(--m)}
+.cotiz .lbl h3{font-size:var(--t-h);letter-spacing:-.03em;max-width:12ch}
+.cotiz .lbl p{color:var(--muted);margin-top:12px;max-width:30ch}
+.cotiz .cuerpo{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+.cotiz .p{margin-bottom:22px}
+.cotiz .p>b{display:block;font-size:var(--t-s);margin-bottom:10px}
 .ops{display:flex;flex-wrap:wrap;gap:8px}
-.ops button{font:600 .9rem var(--sans);border:1.5px solid #c9d2cc;background:#fff;color:var(--ink);border-radius:999px;padding:.55em 1em;cursor:pointer;transition:background .15s,border-color .15s}
-.ops button:hover{border-color:var(--sage)}
-.ops button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.cotiz-res{background:var(--ink);color:#fff;border-radius:20px;padding:26px;min-height:100%}
-.cotiz-res .vacio{color:var(--mist);margin:0}
-.cotiz-res .plan-n{font-size:1.5rem;font-weight:800;margin:4px 0}
-.cotiz-res .monto{font:600 2.2rem/1 var(--mono);margin:10px 0 4px}
+.ops button{font:600 var(--t-s) var(--sans);border:0;background:var(--paper);color:var(--ink);border-radius:var(--r);padding:.65em 1em;cursor:pointer;transition:background-color .15s ease,color .15s ease,transform .16s var(--ease-out)}
+.ops button:active{transform:scale(.97)}
+.ops button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.cotiz-res{background:var(--ink);color:#fff;border-radius:var(--r);padding:26px;min-height:260px}
+.cotiz-res .vacio{color:var(--mist)}
+.cotiz-res .plan-n{font-size:var(--t-h);font-weight:700;letter-spacing:-.03em;margin:4px 0}
+.cotiz-res .monto{font:600 var(--t-h)/1 var(--sans);letter-spacing:-.04em;margin:10px 0 6px}
 .cotiz-res small{color:var(--mist)}
-.cotiz-res p{color:#cfd9d3;font-size:.95rem}
-.cotiz-res .btn{margin-top:12px;width:100%}
-@media (max-width:900px){.cotiz{grid-template-columns:1fr;padding:22px}}
+.cotiz-res p{color:#cfd9d3;font-size:var(--t-s);margin-top:12px}
+.cotiz-res .btn{margin-top:14px;width:100%}
+@media (max-width:900px){.cotiz{grid-template-columns:1fr;padding:56px var(--m)}.cotiz .lbl{padding:0 0 28px}.cotiz .cuerpo{grid-template-columns:1fr}}
 
-/* AGENDA */
-.pestanas{display:inline-flex;gap:6px;background:var(--paper);border-radius:999px;padding:5px;margin-bottom:18px;max-width:100%}
-.diag .grid>*{min-width:0}
-@media (max-width:420px){.pestanas button{padding:.6em .8em;font-size:.85rem}}
-.pestanas button{font:600 .92rem var(--sans);border:0;background:transparent;padding:.65em 1.1em;border-radius:999px;cursor:pointer;color:var(--graphite)}
+/* ===== AGENDA ===== */
+.diag{padding:clamp(72px,9vw,140px) var(--m) clamp(72px,9vw,140px) 0;display:grid;grid-template-columns:var(--eje) 1fr}
+.diag .lbl{padding:0 var(--m)}
+.diag h2{font-size:var(--t-h);max-width:12ch}
+.diag .lbl p{color:var(--muted);margin-top:18px;max-width:32ch;font-size:var(--t-l);line-height:1.45}
+.pestanas{display:inline-flex;gap:4px;background:var(--fog);border-radius:var(--r);padding:4px;margin-bottom:18px;max-width:100%}
+.pestanas button{font:600 var(--t-s) var(--sans);border:0;background:transparent;padding:.65em 1.1em;border-radius:6px;cursor:pointer;color:var(--muted)}
 .pestanas button[aria-selected="true"]{background:var(--ink);color:#fff}
-.agenda{background:var(--paper);border-radius:24px;padding:28px}
+.agenda,form#form{background:#fff;border-radius:var(--r);padding:28px}
+.agenda .info{color:var(--muted);font-size:var(--t-s);margin-bottom:16px}
 .agenda .dias{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
-.agenda .dias button{flex:none;font:600 .88rem var(--sans);border:1.5px solid #c9d2cc;background:#fff;border-radius:14px;padding:.6em .9em;cursor:pointer;text-align:center;line-height:1.3;color:var(--ink)}
-.agenda .dias button b{display:block;font:600 1.15rem var(--mono)}
-.agenda .dias button[aria-pressed="true"]{background:var(--sage);color:#fff;border-color:var(--sage)}
+.agenda .dias button{flex:none;font:600 var(--t-s) var(--sans);border:0;background:var(--paper);border-radius:var(--r);padding:.7em 1em;cursor:pointer;text-align:center;line-height:1.3;color:var(--ink);transition:background-color .15s ease,transform .16s var(--ease-out)}
+.agenda .dias button:active,.agenda .horas button:active{transform:scale(.96)}
+.agenda .dias button b{display:block;font:700 var(--t-l) var(--sans)}
+.agenda .dias button[aria-pressed="true"]{background:var(--sage);color:#fff}
 .agenda .horas{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin:16px 0}
-.agenda .horas button{font:600 .95rem var(--mono);border:1.5px solid #c9d2cc;background:#fff;border-radius:12px;padding:.6em;cursor:pointer;color:var(--ink)}
-.agenda .horas button[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--ink)}
-.agenda .datos{display:grid;gap:14px;margin-top:8px}
-.agenda form{padding:0;background:none;border-radius:0}
-.agenda .info{color:var(--graphite);font-size:.95rem;margin:0}
-
-/* DIAGNÓSTICO */
-.diag{background:var(--white)}
-.diag .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
-.diag .foto{border-radius:28px;overflow:hidden;aspect-ratio:4/5;position:relative;margin-top:30px;max-height:460px}
-.diag .foto img{width:100%;height:100%;object-fit:cover}
-form{display:grid;gap:16px;background:var(--paper);border-radius:24px;padding:32px}
-.dos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{display:grid;gap:6px;font-weight:600;font-size:.92rem}
-label small{font-weight:400;color:var(--graphite)}
-input,select,textarea{font:400 1rem var(--sans);padding:.85em .95em;border-radius:12px;border:1.5px solid #c9d2cc;background:#fff;color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s}
+.agenda .horas button{font:600 var(--t-s) var(--mono);border:0;background:var(--paper);border-radius:var(--r);padding:.7em;cursor:pointer;color:var(--ink);transition:background-color .15s ease,transform .16s var(--ease-out)}
+.agenda .horas button[aria-pressed="true"]{background:var(--amber)}
+form{display:grid;gap:16px}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-weight:600;font-size:var(--t-s)}
+label small{font-weight:400;color:var(--muted)}
+input,select,textarea{font:400 16px var(--sans);padding:.85em .95em;border-radius:var(--r);border:1.5px solid #c9d2cc;background:#fff;color:var(--ink);width:100%;transition:border-color .2s ease,box-shadow .2s ease}
 input:focus,select:focus,textarea:focus{border-color:var(--sage);outline:none;box-shadow:0 0 0 4px rgba(64,94,86,.15)}
 textarea{min-height:96px;resize:vertical}
-.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.88rem;color:var(--graphite)}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--muted)}
 .check input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--sage)}
 .trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.estado{font-weight:600;font-size:.95rem;min-height:1.4em;margin:0}
+.estado{font-weight:600;font-size:var(--t-s);min-height:1.4em}
 .estado.err{color:var(--red)}
 .estado.ok{color:var(--sage)}
-@media (max-width:960px){.diag .grid{grid-template-columns:1fr;gap:36px}.diag .foto{display:none}}
-@media (max-width:520px){.dos{grid-template-columns:1fr}form{padding:22px}}
+.diag .der{min-width:0}
+@media (max-width:900px){.diag{grid-template-columns:1fr;padding:64px var(--m)}.diag .lbl{padding:0 0 28px}}
+@media (min-width:601px) and (max-width:900px){.diag .lbl{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end}.diag .lbl p{margin-top:0}}
+@media (max-width:520px){.dos{grid-template-columns:1fr}.agenda,form#form{padding:20px}.pestanas button{padding:.6em .75em;font-size:14px}}
 
-/* PREGUNTAS */
-.faq .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
-details{border-bottom:1px solid #cdd6d0}
-details:first-of-type{border-top:1px solid #cdd6d0}
-summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;font-weight:700;font-size:1.06rem;position:relative}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"";position:absolute;right:8px;top:50%;width:14px;height:14px;margin-top:-10px;border-right:2.5px solid var(--sage);border-bottom:2.5px solid var(--sage);transform:rotate(45deg);transition:transform .3s var(--ease)}
-details[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
-details .r{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
-details[open] .r{grid-template-rows:1fr}
-details .r>div{overflow:hidden}
-details p{margin:0 0 22px;color:var(--graphite);max-width:64ch}
-@media (max-width:900px){.faq .grid{grid-template-columns:1fr;gap:28px}}
+/* ===== PREGUNTAS: texto de lectura ===== */
+.faq{padding:clamp(72px,9vw,140px) var(--m);background:var(--white);display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr}
+.faq h2{font-size:var(--t-h);max-width:10ch}
+.faq .texto{columns:2;column-gap:56px}
+.faq .texto p{break-inside:avoid;margin:0 0 22px;line-height:1.58;color:var(--muted)}
+.faq .texto p b{font-weight:600;color:var(--ink)}
+@media (max-width:900px){.faq{grid-template-columns:1fr;gap:24px}.faq .texto{columns:1}}
 
-/* CIERRE */
-.cierre{background:var(--sage);color:#fff;text-align:center;overflow:hidden}
-.cierre h2{color:#fff;margin:0 auto;max-width:18ch}
-.cierre p{color:#d6e0da;margin:18px auto 34px;max-width:46ch}
-.cierre .bg{position:absolute;left:50%;top:50%;width:700px;transform:translate(-50%,-50%);opacity:.06;pointer-events:none}
+/* ===== CIERRE ===== */
+.tira{display:grid;grid-template-columns:repeat(3,1fr);height:40svh;min-height:240px}
+.tira img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.banda{background:var(--sage);color:#fff;min-height:44svh;padding:clamp(48px,6vw,88px) var(--m);display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr;gap:0;position:relative}
+.banda>div:first-child{grid-column:2;grid-row:1}
+.banda .st{font-size:clamp(22px,2.2vw,32px);line-height:1.3;letter-spacing:-.02em;font-weight:600;max-width:26ch}
+.banda .st a{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:7px;text-decoration-color:var(--amber);transition:text-decoration-color .2s ease}
+@media (hover:hover) and (pointer:fine){.banda .st a:hover{text-decoration-color:#fff}}
+.banda .sub{margin-top:28px;color:#d6e2dc;max-width:46ch}
+.banda .retrato{grid-column:1;grid-row:1;align-self:end;width:150px}
+.banda .retrato img{width:150px;height:188px;object-fit:cover;object-position:50% 20%;border-radius:var(--r)}
+.banda .retrato span{display:block;font-size:var(--t-s);color:#d6e2dc;margin-top:8px}
+@media (max-width:900px){.tira{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;height:auto}.tira img:first-child{grid-column:1/3;aspect-ratio:4/3}.tira img{aspect-ratio:1/1}.banda{grid-template-columns:1fr;gap:32px}.banda>div:first-child{grid-column:1;grid-row:1}.banda .retrato{grid-column:1;grid-row:2;width:96px}.banda .retrato img{width:96px;height:120px}}
 
-/* pie */
-footer{background:var(--ink);color:#b9c5be;padding:56px 0 100px;font-size:.92rem}
-footer .grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
-footer a{color:#fff}
-footer .logo{color:#fff}
-footer .logo b{color:var(--mist)}
-footer .logo img{height:44px;width:auto}
+/* ===== PIE ===== */
+footer{background:var(--ink);color:#b9c5be;min-height:92svh;display:grid;grid-template-rows:auto 1fr auto;padding:40px var(--m) 24px}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;font-size:var(--t-s)}
+footer .cols ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer .cols li:first-child{color:#fff;font-weight:600}
+footer .cols a{text-decoration:none}
+footer .cols a:hover{color:#fff;text-decoration:underline}
+footer .marca-g{grid-row:3;margin-top:48px}
+footer .marca-g svg{width:100%;height:auto;display:block}
+footer .legal{font-size:var(--t-s);margin-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:900px){footer{min-height:auto}footer .cols{grid-template-columns:1fr 1fr}}
 
-.flota{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);transform:scale(0);transition:transform .4s var(--ease)}
-.flota.on{transform:scale(1)}
+.flota{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);transform:scale(.9);opacity:0;pointer-events:none;transition:transform .25s var(--ease-out),opacity .25s ease}
+.flota.on{transform:none;opacity:1;pointer-events:auto}
+.flota:active{transform:scale(.95)}
 .flota svg{width:30px;height:30px;fill:#fff}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
   .rv{opacity:1;transform:none}
-  .foto-hero .marco{clip-path:none}
-  .cinta .pista{animation:none}
 }
 </style>
 </head>
 <body>
 
-<header id="cab">
-  <div class="wrap bar">
-    <a class="logo" href="#inicio"><img src="img/marca/logo-horizontal.png" alt="PHD Estudio Contable" width="139" height="40"></a>
-    <nav aria-label="Principal">
-      <a href="#planes">Planes</a>
-      <a href="/herramientas.html">Herramientas</a>
-      <a href="/guias/">Guías</a>
-      <a href="#quien">Nosotros</a>
-      <a class="btn btn-wa wa" href="#" data-msg="Hola PHD, quiero mi diagnóstico gratuito.">Escríbenos</a>
-    </nav>
-  </div>
+<header class="fijo" id="cab" aria-label="Navegación">
+  <a class="marca" href="#inicio"><img src="img/marca/logo-horizontal-blanco.png" alt="PHD Estudio Contable" width="111" height="32"></a>
+  <nav aria-label="Principal"><a href="#planes">Planes</a><a href="/herramientas.html">Herramientas</a><a href="/guias/">Guías</a><a href="#quien">Nosotros</a></nav>
+  <a class="btn btn-ink" href="#diagnostico">Agendar diagnóstico</a>
 </header>
 
 <main id="inicio">
+<div class="mast" aria-hidden="false">
+  <header class="cab">
+    <a class="marca" href="#inicio"><img src="img/marca/logo-horizontal-blanco.png" alt="PHD Estudio Contable" width="132" height="38"></a>
+    <nav class="tab" aria-label="Secciones"><a href="#planes">Planes</a><a href="/herramientas.html">Herramientas</a><a href="/guias/">Guías</a></nav>
+    <div class="acc"><a class="btn btn-ink" href="#diagnostico">Agendar diagnóstico</a></div>
+  </header>
+  <div class="tile c1"><img src="img/fotos/cover_vie-1200.webp" alt="Contadora entregando documentos a una emprendedora" width="1127" height="1400"></div>
+  <div class="tile c2 t-sage"><img src="img/glifo-blanco.png" alt="" width="220" height="256"></div>
+  <div class="tile c3"><img src="img/fotos/c1_s7-800.webp" alt="Contadora revisando archivadores" width="644" height="800"></div>
+  <div class="tile c4 t-fog"></div>
+  <div class="tile c5 t-ink"></div>
+  <div class="tile c6"><img src="img/fotos/cover_mar-800.webp" alt="Bodeguero revisando sus boletas" width="644" height="800"></div>
+  <div class="tile c7"><img src="img/fotos/c1_portada-1200.webp" alt="Dos comerciantes cerrando una venta" width="1127" height="1400"></div>
+  <div class="tile c8 t-amber"><b>18 nov</b><span>vence si tu RUC termina en 3</span></div>
+</div>
+
 <section class="hero">
-  <div class="wrap grid">
-    <div>
-      <h1><span class="ln"><span>Tu negocio formal</span></span><span class="ln"><span>y al día con SUNAT,</span></span><span class="ln"><span>sin sustos.</span></span></h1>
-      <p class="lead">Somos el estudio contable de los emprendedores y mypes de Lima. Declaramos por ti cada mes, revisamos tu buzón SOL todos los días y te avisamos antes de que algo venza.</p>
-      <div class="ctas">
-        <a class="btn btn-wa wa" href="#" data-msg="Hola PHD, quiero mi diagnóstico gratuito.">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
-          Diagnóstico gratis por WhatsApp
-        </a>
-        <a class="btn btn-line" href="#planes">Ver planes y precios</a>
-      </div>
-      <ul class="trust">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Desde S/ 150 al mes</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>100% virtual</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Respuesta el mismo día hábil</li>
-      </ul>
-    </div>
-    <div class="foto-hero">
-      <div class="marco"><img src="img/fotos/cover_vie-1200.webp" alt="Contadora entregando documentos a una emprendedora sonriente en su oficina" width="1127" height="1400" id="parallax"></div>
-      <div class="chip c1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><b>Declaración presentada</b><small>IGV y Renta · octubre</small></span></div>
-      <div class="chip c2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></span><span><b>Vence en 5 días</b><small>Te avisamos con tiempo</small></span></div>
-      <div class="chip c3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16v11H4z"/><path d="m4 7 8 6 8-6"/></svg></span><span><b>Buzón SOL revisado</b><small>Hoy, 8:10 a. m.</small></span></div>
-    </div>
+  <p class="standfirst">El estudio contable de los emprendedores y mypes de Lima. Declaramos por ti, vigilamos tu buzón SOL cada día y te avisamos antes de cada vencimiento.</p>
+  <h1><span class="ln"><span>Tu negocio,</span></span><span class="ln"><span>al día con SUNAT.</span></span></h1>
+  <div class="ctas">
+    <a class="btn btn-sage wa" href="#" data-msg="Hola PHD, quiero mi diagnóstico gratuito.">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+      Diagnóstico gratis por WhatsApp</a>
+    <a class="link" href="#planes">Planes desde S/ 150 al mes</a>
   </div>
 </section>
 
-<div class="cinta" aria-hidden="true"><div class="pista">
-  <span>Declaraciones mensuales</span><span>Registros SIRE</span><span>Planilla PLAME</span><span>Buzón SOL</span><span>Formalización y RUC</span><span>Regularización de multas</span><span>Estados financieros</span>
-  <span>Declaraciones mensuales</span><span>Registros SIRE</span><span>Planilla PLAME</span><span>Buzón SOL</span><span>Formalización y RUC</span><span>Regularización de multas</span><span>Estados financieros</span>
-</div></div>
-
-<section class="calc" id="vencimientos">
-  <img class="bg" src="img/glifo-blanco.png" alt="" aria-hidden="true">
-  <div class="wrap grid">
-    <div class="rv">
-      <h2>¿Cuándo vence tu declaración?</h2>
-      <p class="lead">SUNAT fija la fecha según el último número de tu RUC. Tócalo y te decimos cuántos días te quedan.</p>
+<section class="plate" id="vencimientos">
+  <div class="izq">
+    <div class="cuadro res" aria-live="polite">
+      <div><div class="fecha">Tu fecha</div><p class="sub">Elige el último dígito de tu RUC y te mostramos el día exacto en que vence tu IGV y Renta.</p></div>
+      <span class="faltan">Cronograma SUNAT 2026</span>
     </div>
-    <div class="venc rv" data-d="1">
-      <p class="sub">Último dígito de tu RUC</p>
-      <div class="keys" role="group" aria-label="Último dígito del RUC">
+    <p class="fuente">Fuente: <a href="https://www.sunat.gob.pe/orientacion/cronogramas/2026/cObligacionMensual2026.html" target="_blank" rel="noopener">cronograma oficial SUNAT 2026</a>. No aplica a Buenos Contribuyentes.</p>
+  </div>
+  <div class="der">
+    <div>
+      <h2 class="rv">¿Cuándo vence tu declaración?</h2>
+      <p class="desc rv">SUNAT fija la fecha según el último número de tu RUC. Tócalo y te decimos cuántos días te quedan.</p>
+      <div class="keys rv" role="group" aria-label="Último dígito del RUC">
         <button type="button" aria-pressed="false">0</button><button type="button" aria-pressed="false">1</button><button type="button" aria-pressed="false">2</button><button type="button" aria-pressed="false">3</button><button type="button" aria-pressed="false">4</button><button type="button" aria-pressed="false">5</button><button type="button" aria-pressed="false">6</button><button type="button" aria-pressed="false">7</button><button type="button" aria-pressed="false">8</button><button type="button" aria-pressed="false">9</button>
       </div>
-      <div class="res" aria-live="polite"><p class="vacio">Te mostramos la fecha de tu próxima declaración mensual (IGV y Renta) y las dos siguientes.</p></div>
-      <p class="fuente">Fuente: <a href="https://www.sunat.gob.pe/orientacion/cronogramas/2026/cObligacionMensual2026.html" target="_blank" rel="noopener">cronograma oficial SUNAT 2026</a>. No aplica a Buenos Contribuyentes.</p>
+      <ul class="luego" id="luego"></ul>
+    </div>
+    <div>
+      <div class="acciones2">
+        <a class="a1 wa" id="avisame" href="#" data-msg="Hola PHD, quiero que me avisen antes de cada vencimiento.">Avísenme cada mes por WhatsApp</a>
+        <a class="a2" href="/herramientas.html">Más calculadoras gratis</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="dolor">
-  <div class="wrap grid">
-    <figure class="foto rv" style="margin:0">
-      <img src="img/fotos/cover_mar-1200.webp" alt="Bodeguero preocupado revisando boletas y una calculadora en su tienda" loading="lazy" width="1127" height="1400">
-      <figcaption>Cuando el contador eres tú, los impuestos te quitan tiempo de vender.</figcaption>
-    </figure>
+<section class="servs" aria-label="Qué hacemos">
+  <div class="mos">
+    <div class="h rv"><h2>Cada mes, por ti</h2></div>
+    <div class="foto rv" data-d="1"><img src="img/fotos/cover_jue-1200.webp" alt="Emprendedora trabajando con su laptop en su taller" width="1127" height="1400" loading="lazy"></div>
+    <div class="cifra rv"><b>100 %</b><span>de rebaja en la multa si regularizas antes de que SUNAT te notifique.</span></div>
+    <div class="lista rv" data-d="1"><ul><li>IGV y Renta</li><li>Registros SIRE</li><li>Planilla PLAME</li><li>Buzón SOL</li></ul></div>
+    <div class="frase rv"><p>Leemos tu buzón SOL cada día.</p><small>Te explicamos en simple cada notificación. Una notificación vale aunque no la leas.</small></div>
+    <div class="frase2 rv" data-d="1"><p>Pagas lo justo, en el régimen correcto.</p><small>Elegimos contigo entre NRUS, RER, MYPE y General. <a href="/herramientas.html#regimen">Compáralos aquí</a>.</small></div>
+  </div>
+</section>
+
+<section class="como" id="como">
+  <div class="top">
+    <h2 class="rv">Del desorden a la constancia.</h2>
+    <p class="rv" data-d="1">Nos mandas tus comprobantes como los tengas: fotos, PDF o el correo de SUNAT. Nosotros los ordenamos, declaramos a tiempo y te devolvemos la constancia.</p>
+  </div>
+  <svg id="flujo" viewBox="0 0 1200 260" role="img" aria-label="Comprobantes desordenados que se ordenan y terminan declarados"></svg>
+  <div class="tres">
+    <div class="rv"><b>Junta</b><p>Fotos de tus boletas y facturas, cuando puedas, por WhatsApp o correo.</p></div>
+    <div class="rv" data-d="1"><b>Ordenamos</b><p>Registramos compras y ventas en SIRE y revisamos que todo cuadre.</p></div>
+    <div class="rv" data-d="2"><b>Declaramos</b><p>Presentamos a tiempo y la constancia llega a tu carpeta digital.</p></div>
+  </div>
+</section>
+
+<section class="quien" id="quien">
+  <div class="fila">
+    <div class="datos rv">
+      <div class="foto"><img src="img/fotos/italo-400.webp" srcset="img/fotos/italo-400.webp 1x, img/fotos/italo-800.webp 2x" alt="Italo, fundador de PHD Consultores" width="220" height="275" loading="lazy"></div>
+      <div><span>Fundador</span><b>Italo</b></div>
+      <div><span>Con base en</span><b>Lima, Perú</b></div>
+      <div><span>Atención</span><b>100 % virtual, por WhatsApp</b></div>
+    </div>
     <div>
-      <h2 class="rv">Si tienes un negocio, seguro te ha pasado algo de esto.</h2>
+      <p class="parr rv">Detrás de PHD hay una persona, no un call center. Soy Italo y coordino la contabilidad de un grupo empresarial del sector minero-industrial, donde estoy a cargo de cierres contables, NIIF y tributación. <strong>Creé PHD para que los emprendedores tengan ese mismo rigor, con un trato cercano y a un precio justo.</strong> Mi meta es simple: que nunca más te enteres de una multa por sorpresa.</p>
+      <p class="firma rv">PHD CONSULTORES S.A.C. · RUC 20612286575</p>
+    </div>
+  </div>
+  <div class="fila fila2">
+    <div class="pal rv">Servicios y recursos</div>
+    <div class="cols rv">
       <ul>
-        <li class="rv"><span class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7M12 17h.01"/></svg></span><div><strong>“No sé en qué régimen estoy ni si me conviene.”</strong><span>Elegimos contigo el régimen que te hace pagar lo justo: NRUS, RER, MYPE Tributario o General.</span></div></li>
-        <li class="rv"><span class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16v11H4z"/><path d="m4 7 8 6 8-6"/></svg></span><div><strong>“Me llegó algo de SUNAT al buzón y no lo vi.”</strong><span>Revisamos tu buzón SOL todos los días y te explicamos cada notificación en simple.</span></div></li>
-        <li class="rv"><span class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></span><div><strong>“Declaré tarde y me pusieron una multa.”</strong><span>Te avisamos antes de cada vencimiento y, si ya tienes multas, las reducimos con las rebajas que permite SUNAT.</span></div></li>
-        <li class="rv"><span class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></span><div><strong>“Mi contador no me contesta.”</strong><span>Te respondemos por WhatsApp el mismo día hábil y te mandamos tus constancias cada mes.</span></div></li>
+        <li><a href="/servicios/formalizacion.html">Formalización y RUC</a><span>desde el día 1</span></li>
+        <li><a href="#planes">Contabilidad mensual</a><span>desde S/ 150</span></li>
+        <li><a href="/servicios/planillas.html">Planillas y PLAME</a><span>plan Crece</span></li>
+        <li><a href="/servicios/regularizacion.html">Regularización de multas</a><span>a medida</span></li>
+        <li><a href="#diagnostico">Diagnóstico</a><span>gratis</span></li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="quien">
-  <div class="wrap">
-    <h2 class="rv">Hecho para negocios como el tuyo.</h2>
-    <div class="tarjetas">
-      <a class="tarjeta rv wa" href="#" data-msg="Hola PHD, quiero formalizar mi negocio y sacar mi RUC.">
-        <img src="img/fotos/cover_jue-800.webp" alt="Emprendedora trabajando con su laptop en su taller de tejidos" loading="lazy">
-        <div class="t"><span class="plan">Formalización</span><h3>Recién empiezas</h3><p>Sacamos tu RUC, elegimos tu régimen y te dejamos listo para emitir comprobantes.</p><span class="ir">Quiero formalizarme</span></div>
-      </a>
-      <a class="tarjeta rv wa" data-d="1" href="#" data-msg="Hola PHD, tengo un negocio sin trabajadores y me interesa el plan Esencial.">
-        <img src="img/fotos/c1_portada-800.webp" alt="Dos comerciantes cerrando una venta con un apretón de manos en una tienda de textiles" loading="lazy">
-        <div class="t"><span class="plan">Plan Esencial · S/ 150</span><h3>Ya vendes, sin trabajadores</h3><p>Tus declaraciones, tu SIRE y tu buzón SOL en orden, mientras tú te enfocas en vender.</p><span class="ir">Me interesa</span></div>
-      </a>
-      <a class="tarjeta rv wa" data-d="2" href="#" data-msg="Hola PHD, tengo trabajadores y me interesa el plan Crece.">
-        <img src="img/fotos/c2_portada-800.webp" alt="Emprendedora y su asesor revisando documentos en una oficina" loading="lazy">
-        <div class="t"><span class="plan">Plan Crece · S/ 300</span><h3>Tu equipo está creciendo</h3><p>Sumamos la planilla PLAME y un estado de resultados para decidir con números.</p><span class="ir">Me interesa</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="como">
-  <div class="wrap">
-    <h2 class="rv">Empezar es simple.</h2>
-    <div class="pasos" id="pasos" data-observar>
-      <div class="linea"><i></i></div>
-      <div class="paso"><span class="num">1</span><h3>Diagnóstico gratis</h3><p>Una llamada de 20 minutos. Revisamos tu situación en SUNAT y te decimos qué te falta y cuánto te costaría.</p></div>
-      <div class="paso"><span class="num">2</span><h3>Ordenamos todo</h3><p>Si aún no tienes RUC, te ayudamos a sacarlo. Si ya lo tienes, ponemos al día lo pendiente y te damos acceso a tu carpeta digital.</p></div>
-      <div class="paso"><span class="num">3</span><h3>Cada mes, tranquilo</h3><p>Nos envías tus comprobantes, declaramos a tiempo y te llegan tus constancias con el resumen de lo que pagaste.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="tec">
-  <div class="wrap grid">
-    <div>
-      <h2 class="rv">Un estudio contable que trabaja con tecnología.</h2>
-      <p class="lead rv">Automatizamos lo repetitivo para dedicarle más tiempo a tu negocio.</p>
-      <ul class="tec-l">
-        <li class="rv"><img class="ic" src="img/marca/icono-correo.png" alt="" width="44" height="44"><div><b>Buzón SOL vigilado a diario</b><span>Nuestro sistema revisa tu buzón cada día y nos alerta apenas llega algo.</span></div></li>
-        <li class="rv"><img class="ic" src="img/marca/icono-archivo.png" alt="" width="44" height="44"><div><b>Tus constancias, siempre a mano</b><span>Cada declaración y registro SIRE queda en tu carpeta digital, ordenado por año y mes.</span></div></li>
-        <li class="rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span><div><b>Alertas antes de vencer</b><span>Sabes qué toca pagar y cuándo, con días de anticipación.</span></div></li>
-        <li class="rv"><img class="ic" src="img/marca/icono-asesoria.png" alt="" width="44" height="44"><div><b>Te explicamos en simple</b><span>Nada de tecnicismos: qué significa cada cifra y qué te conviene.</span></div></li>
+      <ul>
+        <li><a href="/herramientas.html#regimen">¿Qué régimen me conviene?</a><span>calculadora</span></li>
+        <li><a href="/herramientas.html#igv">IGV del mes</a><span>calculadora</span></li>
+        <li><a href="/herramientas.html#multa">Multa por declarar tarde</a><span>calculadora</span></li>
+        <li><a href="/guias/como-sacar-ruc.html">Cómo sacar tu RUC</a><span>guía</span></li>
+        <li><a href="/guias/buzon-sol-notificaciones.html">Buzón SOL</a><span>guía</span></li>
       </ul>
-    </div>
-    <div class="escena" id="escena" aria-hidden="true" data-observar>
-      <div class="foto"><img src="img/fotos/c1_s7-800.webp" alt="" loading="lazy"></div>
-      <div class="telefono"><div class="pant">
-        <div class="top"><img src="img/isotipo-96.png" alt="">PHD Consultores</div>
-        <div class="msg"><b>Buzón SOL · sin novedades</b>Revisamos tu buzón esta mañana. No tienes notificaciones nuevas.<span class="h">8:12</span></div>
-        <div class="msg"><b>Tu declaración vence el 18</b>Tu RUC termina en 3. Envíanos tus comprobantes de octubre hasta el 12.<span class="h">9:30</span></div>
-        <div class="msg"><b>Constancia lista ✓</b>Presentamos tu IGV-Renta de octubre. La constancia ya está en tu carpeta.<span class="h">16:05</span></div>
-      </div></div>
-    </div>
-  </div>
-</section>
-
-<section class="yo" id="quien">
-  <div class="wrap grid">
-    <div class="foto rv"><img src="img/fotos/italo-800.webp" alt="Italo, fundador de PHD Consultores" width="800" height="800" loading="lazy"></div>
-    <div>
-      <h2 class="rv">Detrás de PHD hay una persona, no un call center.</h2>
-      <p class="lead rv">Soy Italo, fundador de PHD. Trabajo como coordinador de contabilidad en un grupo empresarial del sector minero-industrial, donde estoy a cargo de cierres contables, NIIF y tributación. Creé PHD para que los emprendedores tengan ese mismo rigor, con un trato cercano y a un precio justo.</p>
-      <ul class="rv">
-        <li>Especialista en tributación peruana y NIIF</li>
-        <li>Experiencia en contabilidad de empresas medianas y grandes</li>
-        <li>Automatizo procesos contables para que nada se pase por alto</li>
-      </ul>
-      <blockquote class="rv">“Mi meta es simple: que nunca más te enteres de una multa por sorpresa.”</blockquote>
-      <p class="firma rv">Italo<small>Fundador de PHD Consultores</small></p>
-      <a class="btn btn-wa wa rv" href="#" data-msg="Hola Italo, quiero conversar sobre mi negocio." style="margin-top:8px">Habla conmigo por WhatsApp</a>
     </div>
   </div>
 </section>
 
 <section class="planes" id="planes">
-  <div class="wrap">
-    <div class="cab">
-      <h2 class="rv">Planes claros, sin letra chica.</h2>
-      <div class="toggle rv" role="group" aria-label="Mostrar precios">
-        <button type="button" aria-pressed="true" data-igv="0">Sin IGV</button><button type="button" aria-pressed="false" data-igv="1">Con IGV</button>
-      </div>
+  <div class="intro">
+    <h2 class="rv">Planes claros, sin letra chica.</h2>
+    <div class="der rv" data-d="1">
+      <p>El diagnóstico gratuito confirma tu plan exacto según tus ventas y trabajadores. ¿Aún no tienes RUC? Te formalizamos primero.</p>
+      <div class="toggle" role="group" aria-label="Mostrar precios"><button type="button" aria-pressed="true" data-igv="0">Sin IGV</button><button type="button" aria-pressed="false" data-igv="1">Con IGV</button></div>
     </div>
-    <div class="cotiz rv" id="cotizador">
+  </div>
+  <div class="campos">
+    <article class="campo c-es">
+      <h3>Esencial</h3>
+      <p class="para">Para negocios que empiezan, sin trabajadores en planilla.</p>
+      <p class="incl">Tu declaración mensual de IGV y Renta, tus registros SIRE, la revisión diaria de tu buzón SOL, tus constancias en tu carpeta digital y asesoría por WhatsApp.</p>
+      <div class="pie"><div class="precio">S/ <span data-base="150">150</span><small class="sufijo">al mes + IGV</small></div><a class="btn btn-ink wa" href="#" data-msg="Hola PHD, me interesa el plan Esencial (S/ 150).">Quiero el Esencial</a></div>
+    </article>
+    <article class="campo c-cr">
+      <h3>Crece</h3>
+      <p class="para">Para mypes con hasta 3 trabajadores. Es el plan más elegido.</p>
+      <p class="incl">Todo lo del Esencial, más tu planilla electrónica PLAME con boletas de pago, un estado de resultados cada mes, alertas de pagos y vencimientos, y atención prioritaria.</p>
+      <div class="pie"><div class="precio">S/ <span data-base="300">300</span><small class="sufijo">al mes + IGV</small></div><a class="btn btn-amber wa" href="#" data-msg="Hola PHD, me interesa el plan Crece (S/ 300).">Quiero el Crece</a></div>
+    </article>
+    <article class="campo c-em">
+      <h3>Empresa</h3>
+      <p class="para">Régimen General o más movimiento. Desde S/ 500, según tu volumen.</p>
+      <p class="incl">Todo lo del Crece, con libros electrónicos completos, planilla con más trabajadores, estados financieros y una reunión mensual de resultados.</p>
+      <div class="pie"><div class="precio">S/ <span data-base="500">500</span><small class="sufijo">al mes + IGV</small></div><a class="btn btn-paper wa" href="#" data-msg="Hola PHD, me interesa el plan Empresa.">Cotizar</a></div>
+    </article>
+  </div>
+  <div class="cotiz" id="cotizador">
+    <div class="lbl rv"><h3>¿No sabes cuál te toca?</h3><p>Responde tres preguntas y te decimos tu plan y su precio.</p></div>
+    <div class="cuerpo">
       <div>
-        <h3>¿No sabes qué plan te toca? Responde 3 preguntas.</h3>
         <div class="p"><b>¿Ya tienes RUC?</b><div class="ops" data-q="ruc"><button type="button" data-v="si">Sí</button><button type="button" data-v="no">Todavía no</button></div></div>
         <div class="p"><b>¿Cuánto vendes al mes, aproximadamente?</b><div class="ops" data-q="ventas"><button type="button" data-v="1">Hasta S/ 8 mil</button><button type="button" data-v="2">S/ 8 mil a 40 mil</button><button type="button" data-v="3">S/ 40 mil a 140 mil</button><button type="button" data-v="4">Más de S/ 140 mil</button></div></div>
         <div class="p"><b>¿Cuántos trabajadores tienes en planilla?</b><div class="ops" data-q="trab"><button type="button" data-v="0">Ninguno</button><button type="button" data-v="1">1 a 3</button><button type="button" data-v="2">4 o más</button></div></div>
       </div>
       <div class="cotiz-res" aria-live="polite"><p class="vacio">Tu plan recomendado y su precio aparecen aquí.</p></div>
     </div>
-    <div class="grid">
-      <article class="plan rv">
-        <h3>Esencial</h3>
-        <p class="para">Para negocios que empiezan, sin trabajadores en planilla.</p>
-        <div class="precio">S/ <span data-base="150">150</span> <small class="sufijo">al mes + IGV</small></div>
-        <ul>
-          <li>Declaración mensual de IGV y Renta</li>
-          <li>Registros de ventas y compras (SIRE)</li>
-          <li>Revisión diaria de tu buzón SOL</li>
-          <li>Constancias en tu carpeta digital</li>
-          <li>Asesoría por WhatsApp</li>
-        </ul>
-        <a class="btn btn-line wa" href="#" data-msg="Hola PHD, me interesa el plan Esencial (S/ 150).">Quiero el Esencial</a>
-      </article>
-      <article class="plan dest rv" data-d="1">
-        <span class="tag">El más elegido</span>
-        <h3>Crece</h3>
-        <p class="para">Para mypes con hasta 3 trabajadores.</p>
-        <div class="precio">S/ <span data-base="300">300</span> <small class="sufijo">al mes + IGV</small></div>
-        <ul>
-          <li>Todo lo del plan Esencial</li>
-          <li>Planilla electrónica (PLAME) y boletas de pago</li>
-          <li>Estado de resultados cada mes</li>
-          <li>Alertas de pagos y vencimientos</li>
-          <li>Atención prioritaria</li>
-        </ul>
-        <a class="btn btn-wa wa" href="#" data-msg="Hola PHD, me interesa el plan Crece (S/ 300).">Quiero el Crece</a>
-      </article>
-      <article class="plan rv" data-d="2">
-        <h3>Empresa</h3>
-        <p class="para">Para Régimen General o negocios con más movimiento.</p>
-        <div class="precio"><small>desde</small> S/ <span data-base="500">500</span> <small class="sufijo">al mes + IGV</small></div>
-        <ul>
-          <li>Todo lo del plan Crece</li>
-          <li>Libros electrónicos completos</li>
-          <li>Planilla con más trabajadores</li>
-          <li>Estados financieros</li>
-          <li>Reunión mensual de resultados</li>
-        </ul>
-        <a class="btn btn-line wa" href="#" data-msg="Hola PHD, me interesa el plan Empresa.">Cotizar Empresa</a>
-      </article>
-    </div>
-    <p class="nota rv">En el diagnóstico gratuito confirmamos el plan exacto según tus ventas y trabajadores. ¿Aún no tienes RUC? Te ayudamos a formalizarte.</p>
   </div>
 </section>
 
 <section class="diag" id="diagnostico">
-  <div class="wrap grid">
-    <div class="rv">
-      <h2>Pide tu diagnóstico gratuito.</h2>
-      <p class="lead">Agenda una llamada de 20 minutos en el horario que prefieras, o déjanos tus datos y te escribimos hoy. Sin compromiso.</p>
-      <div class="foto"><img src="img/fotos/c2_s7-800.webp" alt="Asesor revisando un documento en su escritorio" loading="lazy"></div>
-    </div>
-    <div class="rv" data-d="1">
+  <div class="lbl">
+    <h2 class="rv">Diagnóstico gratis</h2>
+    <p class="rv">Una llamada de 20 minutos: eliges el día y la hora y te llamamos a tu WhatsApp. Revisamos tu situación en SUNAT y te decimos qué te falta y cuánto costaría.</p>
+  </div>
+  <div class="der rv" data-d="1">
     <div class="pestanas" role="tablist">
-      <button type="button" role="tab" aria-selected="true" data-tab="agenda">Agenda una llamada</button>
+      <button type="button" role="tab" aria-selected="true" data-tab="agenda">Agendar una llamada</button>
       <button type="button" role="tab" aria-selected="false" data-tab="form">Prefiero que me escriban</button>
     </div>
     <div class="agenda" id="agenda">
-      <p class="info">Elige el día y la hora para tu diagnóstico gratuito de 20 minutos. Te llamamos a tu WhatsApp.</p>
+      <p class="info">Horarios disponibles de lunes a viernes (hora de Lima).</p>
       <div class="dias" role="group" aria-label="Día"></div>
       <div class="horas" role="group" aria-label="Hora"></div>
       <form class="datos" id="reserva" novalidate hidden>
@@ -607,7 +527,7 @@ footer .logo img{height:44px;width:auto}
         </label>
         <div class="trampa" aria-hidden="true"><label>Web<input name="web" tabindex="-1" autocomplete="off"></label></div>
         <label class="check"><input type="checkbox" name="acepta" required> <span>Autorizo a PHD Consultores a usar mis datos para contactarme, según su <a href="privacidad.html">política de privacidad</a>.</span></label>
-        <button class="btn btn-wa" type="submit" style="justify-content:center">Confirmar mi cita</button>
+        <button class="btn btn-sage" type="submit">Confirmar mi cita</button>
       </form>
       <p class="estado" role="status"></p>
     </div>
@@ -619,62 +539,57 @@ footer .logo img{height:44px;width:auto}
       <div class="dos">
         <label>RUC <small>(si ya tienes)</small><input name="ruc" inputmode="numeric" maxlength="11"></label>
         <label>¿Qué necesitas?
-          <select name="plan">
-            <option value="Formalizarme">Formalizarme / sacar RUC</option>
-            <option value="Esencial">Plan Esencial</option>
-            <option value="Crece">Plan Crece</option>
-            <option value="Empresa">Plan Empresa</option>
-            <option value="No sé" selected>Aún no sé</option>
-          </select>
+          <select name="plan"><option value="Formalizarme">Formalizarme / sacar RUC</option><option value="Esencial">Plan Esencial</option><option value="Crece">Plan Crece</option><option value="Empresa">Plan Empresa</option><option value="No sé" selected>Aún no sé</option></select>
         </label>
       </div>
       <label>Cuéntanos de tu negocio <small>(opcional)</small><textarea name="mensaje" maxlength="600" placeholder="Ej.: tengo una bodega, vendo unos S/ 8,000 al mes y no tengo trabajadores."></textarea></label>
       <div class="trampa" aria-hidden="true"><label>Web<input name="web" tabindex="-1" autocomplete="off"></label></div>
       <label class="check"><input type="checkbox" name="acepta" required> <span>Autorizo a PHD Consultores a usar mis datos para contactarme sobre sus servicios, según su <a href="privacidad.html">política de privacidad</a>.</span></label>
-      <button class="btn btn-wa" type="submit" style="justify-content:center">Pedir mi diagnóstico</button>
+      <button class="btn btn-sage" type="submit">Pedir mi diagnóstico</button>
       <p class="estado" role="status"></p>
     </form>
-    </div>
   </div>
 </section>
 
 <section class="faq" id="preguntas">
-  <div class="wrap grid">
-    <div><h2 class="rv">Preguntas frecuentes</h2><p class="lead rv">¿Otra duda? Escríbenos y te respondemos hoy.</p></div>
-    <div class="rv">
-      <details><summary>¿Tengo que ir a alguna oficina?</summary><div class="r"><div><p>No. Todo es virtual: conversamos por WhatsApp o videollamada, nos envías tus comprobantes por foto o correo y te entregamos todo en tu carpeta digital.</p></div></div></details>
-      <details><summary>¿Qué necesito para empezar?</summary><div class="r"><div><p>Tu RUC y tu Clave SOL (o te ayudamos a obtenerlos), y tus comprobantes de compras y ventas del mes. En el diagnóstico te decimos exactamente qué juntar.</p></div></div></details>
-      <details><summary>¿Mi Clave SOL está segura con ustedes?</summary><div class="r"><div><p>Sí. La usamos solo para consultar y declarar lo que nos encargas, se guarda cifrada y nunca la compartimos. Puedes cambiarla cuando quieras.</p></div></div></details>
-      <details><summary>Ya tengo multas o declaraciones atrasadas. ¿Me pueden ayudar?</summary><div class="r"><div><p>Sí. Revisamos tu deuda en SUNAT, presentamos lo pendiente y aplicamos las rebajas de multas que permite SUNAT.</p></div></div></details>
-      <details><summary>Ya tengo contador. ¿Cómo me cambio?</summary><div class="r"><div><p>Es sencillo: pedimos la información de los últimos meses, revisamos que esté en orden y tomamos la posta desde el siguiente periodo, sin que pierdas ninguna fecha.</p></div></div></details>
-      <details><summary>¿Cómo pago?</summary><div class="r"><div><p>Por transferencia o depósito bancario, por adelantado cada mes. Te emitimos tu factura electrónica.</p></div></div></details>
-    </div>
+  <h2 class="rv">Preguntas frecuentes</h2>
+  <div class="texto rv" data-d="1">
+    <p><b>¿Tengo que ir a alguna oficina?</b> No. Todo es virtual: conversamos por WhatsApp o videollamada, nos envías tus comprobantes por foto o correo y te entregamos todo en tu carpeta digital.</p>
+    <p><b>¿Qué necesito para empezar?</b> Tu RUC y tu Clave SOL (o te ayudamos a obtenerlos), y tus comprobantes de compras y ventas del mes. En el diagnóstico te decimos exactamente qué juntar.</p>
+    <p><b>¿Mi Clave SOL está segura con ustedes?</b> Sí. La usamos solo para consultar y declarar lo que nos encargas, se guarda cifrada y nunca la compartimos. Puedes cambiarla cuando quieras.</p>
+    <p><b>Ya tengo multas o declaraciones atrasadas. ¿Me pueden ayudar?</b> Sí. Revisamos tu deuda en SUNAT, presentamos lo pendiente y aplicamos las rebajas de multas que permite SUNAT.</p>
+    <p><b>Ya tengo contador. ¿Cómo me cambio?</b> Pedimos la información de los últimos meses, revisamos que esté en orden y tomamos la posta desde el siguiente periodo, sin que pierdas ninguna fecha.</p>
+    <p><b>¿Cómo pago?</b> Por transferencia o depósito bancario, por adelantado cada mes. Te emitimos tu factura electrónica.</p>
+    <p><b>¿Atienden fuera de Lima?</b> Sí. Como todo es virtual, trabajamos con negocios de cualquier ciudad del Perú.</p>
+    <p><b>¿Cuánto tardan en responder?</b> Respondemos tus mensajes de WhatsApp el mismo día hábil.</p>
   </div>
 </section>
 
-<section class="cierre">
-  <img class="bg" src="img/glifo-blanco.png" alt="" aria-hidden="true">
-  <div class="wrap">
-    <img class="rv" src="img/marca/logo-vertical-blanco.png" alt="PHD Estudio Contable" width="81" height="120" style="margin:0 auto 34px;height:120px;width:auto">
-    <h2 class="rv">Tú vendes. De SUNAT nos encargamos nosotros.</h2>
-    <p class="rv">El diagnóstico es gratis y en 20 minutos sabes exactamente dónde está tu negocio.</p>
-    <a class="btn btn-light wa rv" href="#" data-msg="Hola PHD, quiero mi diagnóstico gratuito.">Escríbenos por WhatsApp</a>
+<div class="tira" aria-hidden="true">
+  <img src="img/fotos/c2_portada-800.webp" alt="" width="644" height="800" loading="lazy">
+  <img src="img/fotos/c2_s5-800.webp" alt="" width="644" height="800" loading="lazy">
+  <img src="img/fotos/c1_s5-800.webp" alt="" width="644" height="800" loading="lazy">
+</div>
+<section class="banda">
+  <div>
+    <p class="st rv">Tú vendes, nosotros vemos SUNAT. <a class="wa" href="#" data-msg="Hola Italo, quiero mi diagnóstico gratuito.">Escríbeme hoy</a>.</p>
+    <p class="sub rv">El diagnóstico es gratis. En 20 minutos sabes exactamente dónde está tu negocio frente a SUNAT.</p>
   </div>
+  <div class="retrato"><img src="img/fotos/italo-400.webp" srcset="img/fotos/italo-400.webp 1x, img/fotos/italo-800.webp 2x" alt="Italo, quien te responde" width="150" height="188" loading="lazy"><span>Italo te responde</span></div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap grid">
-    <div>
-      <a class="logo" href="#inicio"><img src="img/marca/logo-horizontal-blanco.png" alt="PHD Estudio Contable" width="139" height="40"></a>
-      <p style="margin:12px 0 0">Contabilidad y tributación para emprendedores y mypes · Lima, Perú</p>
-      <p style="margin:12px 0 0;display:flex;gap:18px;flex-wrap:wrap"><a href="/herramientas.html" style="color:#cfd9d3">Herramientas</a><a href="/guias/" style="color:#cfd9d3">Guías</a><a href="/servicios/" style="color:#cfd9d3">Servicios</a><a href="#planes" style="color:#cfd9d3">Planes</a></p>
-    </div>
-    <div>
-      <p style="margin:0">WhatsApp: <a class="wa" href="#" data-msg="Hola PHD, quiero información.">943 864 787</a></p>
-      <p style="margin:6px 0 0">PHD CONSULTORES S.A.C. · RUC 20612286575</p>
-      <p style="margin:6px 0 0"><a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · © <span id="anio">2026</span> PHD Consultores</p>
-    </div>
+  <div class="cols">
+    <ul><li>Contacto</li><li><a class="wa" href="#" data-msg="Hola PHD, quiero información.">WhatsApp 943 864 787</a></li><li>Lima, Perú</li><li>Lunes a viernes</li></ul>
+    <ul><li>Servicios</li><li><a href="#planes">Planes</a></li><li><a href="/servicios/formalizacion.html">Formalización</a></li><li><a href="/servicios/regularizacion.html">Regularización</a></li><li><a href="/servicios/planillas.html">Planillas</a></li></ul>
+    <ul><li>Recursos</li><li><a href="/herramientas.html">Herramientas</a></li><li><a href="/guias/">Guías</a></li><li><a href="#vencimientos">Vencimientos</a></li></ul>
+    <ul><li>Empresa</li><li>PHD CONSULTORES S.A.C.</li><li>RUC 20612286575</li><li><a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a></li></ul>
+  </div>
+  <div></div>
+  <div class="marca-g">
+    <svg viewBox="0 0 1000 150" aria-label="PHD Consultores"><text x="0" y="122" fill="#fff" font-family="Montserrat, sans-serif" font-weight="800" font-size="152" letter-spacing="-8" textLength="1000" lengthAdjust="spacingAndGlyphs">PHD Consultores</text></svg>
+    <div class="legal"><span>© <span id="anio">2026</span> PHD Consultores. Contabilidad y tributación para emprendedores y mypes.</span><span>Hecho en Lima</span></div>
   </div>
 </footer>
 
@@ -686,13 +601,29 @@ footer .logo img{height:44px;width:auto}
   "use strict";
   var P = window.PHD, wa = P.wa, ENDPOINT = P.ENDPOINT, reducir = P.reducir, origen = P.origen;
 
-  /* parallax de la foto principal */
-  var par = document.getElementById("parallax"), tic = false;
-  function parallax(){ if (!reducir && par && scrollY < 1000) par.style.setProperty("--py", (-scrollY * 0.12) + "px"); tic = false; }
-  window.addEventListener("scroll", function(){ if (!tic){ tic = true; requestAnimationFrame(parallax); } }, { passive: true });
+  /* cabecera fija: aparece al dejar el masthead */
+  var fijo = document.getElementById("cab");
+  window.addEventListener("scroll", function(){ fijo.classList.toggle("on", scrollY > innerHeight * 0.55); }, { passive: true });
 
-  /* chips: pasan a flotar después de entrar */
-  setTimeout(function(){ if (reducir) return; document.querySelectorAll(".chip").forEach(function(c, i){ c.style.opacity = 1; c.classList.add("vivo"); c.style.animationDelay = (i * -2) + "s"; }); }, 2600);
+  /* diagrama «de boletas sueltas a declaración»: 144 cuadros */
+  (function(){
+    var svg = document.getElementById("flujo"); if (!svg) return;
+    var NS = "http://www.w3.org/2000/svg", s = 11, n = 144, seed = 7;
+    function rnd(){ seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+    var html = "";
+    for (var i = 0; i < n; i++){
+      var x, y, fill;
+      if (i < 52){ x = 20 + rnd() * 330; y = 20 + rnd() * 210; fill = rnd() > .5 ? "#c9d2cc" : "#9ba69e"; }
+      else if (i < 100){ var k = i - 52; x = 430 + Math.floor(k / 3) * 16; y = 107 + (k % 3) * 16; fill = "#405e56"; }
+      else { var j = i - 100; x = 860 + (j % 11) * 30; y = 40 + Math.floor(j / 11) * 46; fill = "#e0a526"; }
+      html += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + s + '" height="' + s + '" rx="2" fill="' + fill + '" style="opacity:0;transition:opacity .5s ease ' + Math.round(x * 1.1) + 'ms"/>';
+    }
+    svg.innerHTML = html;
+    var oS = "IntersectionObserver" in window ? new IntersectionObserver(function(es){
+      if (es[0].isIntersecting){ svg.querySelectorAll("rect").forEach(function(r){ r.style.opacity = 1; }); oS.disconnect(); }
+    }, { threshold: .3 }) : null;
+    if (oS && !reducir) oS.observe(svg); else svg.querySelectorAll("rect").forEach(function(r){ r.style.opacity = 1; r.style.transition = "none"; });
+  })();
 
   /* precios con o sin IGV */
   document.querySelectorAll(".toggle button").forEach(function(b){
@@ -727,7 +658,7 @@ footer .logo img{height:44px;width:auto}
   function larga(f){ return DIAS[f.getDay()] + " " + f.getDate() + " de " + MESES[f.getMonth()]; }
   function cap(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
 
-  var res = document.querySelector(".res");
+  var cuadro = document.querySelector(".cuadro"), luego = document.getElementById("luego"), avisame = document.getElementById("avisame");
   var botones = document.querySelectorAll(".keys button");
   botones.forEach(function(b){
     b.addEventListener("click", function(){
@@ -738,7 +669,7 @@ footer .logo img{height:44px;width:auto}
 
   function contar(el, hasta){
     if (reducir || hasta < 2){ el.textContent = hasta; return; }
-    var t0 = null, dur = 700;
+    var t0 = null, dur = 600;
     function paso(t){ if (!t0) t0 = t; var k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(hasta * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(paso); }
     requestAnimationFrame(paso);
   }
@@ -746,26 +677,21 @@ footer .logo img{height:44px;width:auto}
   function mostrar(d){
     var g = grupo(d), hoy = hoyLima(), prox = [];
     for (var i = 0; i < C.length; i++){ var f = fecha(C[i][g]); if (f >= hoy) prox.push({ mes: i, f: f }); }
+    avisame.href = wa("Hola PHD, mi RUC termina en " + d + ". Quiero que me avisen antes de cada vencimiento.");
     if (!prox.length){
-      res.innerHTML = '<p class="vacio nuevo">SUNAT aún no publica el cronograma del próximo año. Escríbenos y te avisamos tu fecha apenas salga.</p>';
-      return;
+      cuadro.innerHTML = '<div><div class="fecha">Pronto</div><p class="sub">SUNAT aún no publica el cronograma del próximo año. Te avisamos tu fecha apenas salga.</p></div><span class="faltan">Cronograma 2027</span>';
+      luego.innerHTML = ""; return;
     }
     var p = prox[0], dias = Math.round((p.f - hoy) / 86400000);
-    var html = '<div class="nuevo"><div class="periodo">Periodo ' + MESES[p.mes] + ' 2026 · RUC terminado en ' + d + '</div>' +
-      '<div class="fecha">' + larga(p.f) + '</div>' +
+    cuadro.innerHTML = '<div><div class="fecha">' + p.f.getDate() + ' ' + MESES[p.f.getMonth()].slice(0, 3) + '</div><p class="sub">' + cap(DIAS[p.f.getDay()]) + ' ' + p.f.getDate() + ' de ' + MESES[p.f.getMonth()] + ' vence tu IGV y Renta de ' + MESES[p.mes] + ', con RUC terminado en ' + d + '.</p></div>' +
       (dias === 0 ? '<span class="faltan pronto">¡Vence hoy!</span>' : dias === 1 ? '<span class="faltan pronto">Vence mañana</span>'
         : '<span class="faltan' + (dias <= 5 ? ' pronto' : '') + '">Faltan <span class="n">0</span> días</span>');
-    if (prox.length > 1){
-      html += '<ul class="luego">' + prox.slice(1, 3).map(function(x){
-        return '<li>' + cap(MESES[x.mes]) + ': <span>' + x.f.getDate() + '/' + (x.f.getMonth() + 1) + '/' + x.f.getFullYear() + '</span></li>';
-      }).join("") + '</ul>';
-    }
-    html += '<a class="avisame" target="_blank" rel="noopener" href="' + wa("Hola PHD, mi RUC termina en " + d + ". Quiero que me avisen antes de cada vencimiento.") + '">Quiero que me avisen cada mes por WhatsApp</a></div>';
-    res.innerHTML = html;
-    var n = res.querySelector(".faltan .n"); if (n) contar(n, dias);
+    luego.innerHTML = prox.slice(1, 3).map(function(x){
+      return '<li>' + cap(MESES[x.mes]) + ': <span>' + x.f.getDate() + '/' + (x.f.getMonth() + 1) + '/' + x.f.getFullYear() + '</span></li>';
+    }).join("");
+    var n = cuadro.querySelector(".faltan .n"); if (n) contar(n, dias);
     P.medir("calculadora", String(d));
   }
-
 
   /* Cotizador */
   var resp = {}, cres = document.querySelector(".cotiz-res");
@@ -786,7 +712,7 @@ footer .logo img{height:44px;width:auto}
     var extra = resp.ruc === "no" ? "<p>Como aún no tienes RUC, empezamos formalizándote y eligiendo el régimen que más te conviene.</p>" : "";
     var msg = "Hola PHD, hice el cotizador: " + (resp.ruc === "no" ? "aún no tengo RUC, " : "") + "vendo " + ["", "hasta S/ 8 mil", "entre S/ 8 mil y 40 mil", "entre S/ 40 mil y 140 mil", "más de S/ 140 mil"][v] + " al mes y tengo " + ["ningún trabajador", "de 1 a 3 trabajadores", "4 o más trabajadores"][t] + ". Me salió el plan " + plan + ".";
     cres.innerHTML = '<small>Tu plan recomendado</small><div class="plan-n">' + plan + '</div><div class="monto">' + (desde ? '<small style="font-family:var(--sans);font-size:.9rem">desde </small>' : "") + "S/ " + precio + '</div><small>al mes + IGV (S/ ' + Math.round(precio * 1.18) + ' con IGV)</small><p>' + por + "</p>" + extra +
-      '<a class="btn btn-wa" target="_blank" rel="noopener" href="' + wa(msg) + '">Lo quiero: escribir por WhatsApp</a><a class="btn btn-light" href="#diagnostico" style="margin-top:8px">Agendar mi diagnóstico gratis</a>';
+      '<a class="btn btn-amber" target="_blank" rel="noopener" href="' + wa(msg) + '">Lo quiero: escribir por WhatsApp</a><a class="btn btn-paper" href="#diagnostico" style="margin-top:8px">Agendar mi diagnóstico gratis</a>';
     P.medir("cotizador", plan);
   }
 
