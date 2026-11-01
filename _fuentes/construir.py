@@ -31,7 +31,7 @@ for fuente in sorted(glob.glob(os.path.join(RAIZ, "_fuentes", "paginas", "*.html
     head = ""
     if meta.get("tipo") == "article":
         head = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"%s",'
-                '"description":"%s","inLanguage":"es-PE","author":{"@type":"Person","name":"Italo"},'
+                '"description":"%s","inLanguage":"es-PE","author":{"@type":"Person","name":"Italo Michell Bambarén Chacón","jobTitle":"Contador Público Colegiado"},'
                 '"publisher":{"@type":"Organization","name":"PHD Consultores","logo":{"@type":"ImageObject","url":"https://phdconsultores.pe/img/isotipo-512.png"}},'
                 '"dateModified":"%s","mainEntityOfPage":"https://phdconsultores.pe%s"}</script>') % (
             meta["titulo"].replace('"', "'"), meta["descripcion"].replace('"', "'"), meta.get("fecha", date.today().isoformat()), meta["ruta"])
