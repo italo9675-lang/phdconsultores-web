@@ -14,12 +14,13 @@
 <meta property="og:image" content="https://phdconsultores.pe/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#405e56">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AccountingService","name":"PHD Consultores","url":"https://phdconsultores.pe/","telephone":"+51943864787","image":"https://phdconsultores.pe/og.png","priceRange":"S/ 150 – S/ 500+","areaServed":{"@type":"City","name":"Lima"},"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"description":"Contabilidad y tributación para emprendedores y mypes: declaraciones SUNAT, SIRE, planillas, revisión de buzón SOL y formalización."}
+{"@context":"https://schema.org","@type":"AccountingService","name":"PHD Consultores","url":"https://phdconsultores.pe/","telephone":"+51943864787","image":"https://phdconsultores.pe/og.png","logo":"https://phdconsultores.pe/img/isotipo-512.png","priceRange":"S/ 150 – S/ 500+","areaServed":{"@type":"City","name":"Lima"},"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"description":"Contabilidad y tributación para emprendedores y mypes: declaraciones SUNAT, SIRE, planillas, revisión de buzón SOL y formalización."}
 </script>
 <style>
 :root{
@@ -112,7 +113,9 @@ nav .btn{padding:.6em 1.1em;font-size:.92rem}
 @media (max-width:820px){.pasos{grid-template-columns:1fr}.paso:not(:last-child)::after{display:none}}
 
 /* diferencial */
-.dif{background:var(--sage);color:#fff}
+.dif{background:var(--sage) url(img/glifo-blanco.png) no-repeat right -40px bottom -60px/300px auto;color:#fff;position:relative}
+.dif::before{content:"";position:absolute;inset:0;background:rgba(64,94,86,.9);pointer-events:none}
+.dif .wrap{position:relative}
 .dif h2{color:#fff}
 .dif .lead{color:#d6e0da}
 .dif .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 48px;margin-top:44px}
@@ -187,7 +190,7 @@ footer .logo b{color:var(--mist)}
 <header>
   <div class="wrap bar">
     <a class="logo" href="#inicio" aria-label="PHD Consultores, inicio">
-      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#405e56"/><path d="M18 46V18h13a9 9 0 0 1 0 18H18" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><circle cx="46" cy="44" r="4" fill="#e0a526"/></svg>
+      <img src="img/isotipo-96.png" width="38" height="38" alt="">
       PHD <b>Consultores</b>
     </a>
     <nav aria-label="Principal">
@@ -372,7 +375,7 @@ footer .logo b{color:var(--mist)}
 <footer>
   <div class="wrap grid">
     <div>
-      <a class="logo" href="#inicio">PHD <b>Consultores</b></a>
+      <a class="logo" href="#inicio"><img src="img/glifo-blanco.png" width="26" height="30" alt="">PHD <b>Consultores</b></a>
       <p style="margin:10px 0 0">Contabilidad y tributación para emprendedores y mypes · Lima, Perú</p>
     </div>
     <div>
