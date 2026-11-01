@@ -43,18 +43,19 @@ def pagina(meta, cuerpo, extra_head="", extra_js=""):
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/sitio.css">
 {extra_head}
 </head>
 <body class="interior">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
 <header id="cab" class="solid">
   <div class="wrap bar">
     <a class="logo" href="/"><img src="/img/marca/logo-horizontal.png" alt="PHD Estudio Contable" width="152" height="44"></a>
     <nav aria-label="Principal">{nav}<a class="btn btn-wa wa" href="#" data-msg="Hola PHD, quiero mi diagnóstico gratuito.">Escríbenos</a></nav>
   </div>
 </header>
-<main>
+<main id="contenido" tabindex="-1">
 {cuerpo}
 </main>
 <footer>
