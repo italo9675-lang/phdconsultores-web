@@ -223,6 +223,21 @@ header.fijo .btn{margin:8px var(--m) 8px auto;min-height:44px;font-size:var(--t-
 .quien .cols a:hover{text-decoration:underline}
 @media (max-width:900px){.quien .fila{grid-template-columns:1fr;gap:32px}.quien .cols{grid-template-columns:1fr;gap:32px}.quien .fila2{margin-top:56px}}
 
+/* ===== VOCES: testimonios como citas de lectura ===== */
+.voces{padding:clamp(72px,9vw,140px) var(--m);background:var(--white);display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr}
+.voces h2{font-size:var(--t-h);max-width:10ch}
+.voces .citas{display:grid;grid-template-columns:1fr 1fr;gap:56px 56px}
+.voces figure{margin:0;display:flex;flex-direction:column;gap:14px}
+.voces figure:first-child{grid-column:1/3;padding-bottom:48px;border-bottom:1px solid var(--fog)}
+.voces blockquote{margin:0}
+.voces blockquote b{display:block;font-size:var(--t-l);font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.voces blockquote p{color:var(--muted);line-height:1.6;max-width:60ch}
+.voces figure:first-child blockquote p{font-size:var(--t-l);line-height:1.5;color:var(--ink)}
+.voces figure:first-child blockquote b{font-size:var(--t-h);letter-spacing:-.03em;line-height:1.1;max-width:20ch}
+.voces figcaption{font-size:var(--t-s);font-weight:600}
+.voces figcaption span{font-weight:400;color:var(--muted)}
+@media (max-width:900px){.voces{grid-template-columns:1fr;gap:28px}.voces .citas{grid-template-columns:1fr;gap:40px}.voces figure:first-child{grid-column:auto;padding-bottom:40px}}
+
 /* ===== PLANES: campos de color ===== */
 .planes .intro{padding:clamp(72px,9vw,120px) var(--m) 48px;display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr;align-items:end}
 .planes .intro h2{font-size:var(--t-h);padding-right:24px}
@@ -481,6 +496,24 @@ footer .legal{font-size:var(--t-s);margin-top:20px;padding-right:72px;display:fl
         <li><a href="/guias/buzon-sol-notificaciones.html">Buzón SOL</a><span>guía</span></li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="voces" id="clientes" aria-labelledby="t-voces">
+  <h2 id="t-voces" class="rv">Lo que dicen nuestros clientes</h2>
+  <div class="citas">
+    <figure class="rv">
+      <blockquote><b>«Un cambio total para mi empresa»</b><p>Antes de contratar sus servicios, llevar la contabilidad y entender los cambios tributarios era un dolor de cabeza constante. Desde que delegamos nuestra asesoría en ellos, no solo tenemos todo en orden y al día, sino que nos han ayudado a optimizar la carga fiscal de forma legal y segura. Sus respuestas son rápidas, claras y sin tecnicismos complicados. Son un socio estratégico clave para nuestro crecimiento.</p></blockquote>
+      <figcaption>Carlos</figcaption>
+    </figure>
+    <figure class="rv" data-d="1">
+      <blockquote><b>«Tranquilidad absoluta ante las obligaciones fiscales»</b><p>Lo que más valoro de su servicio es la paz mental que me brindan. Como profesional independiente, me asustaba cometer errores con los impuestos. Ellos se encargan de todo de manera impecable, son súper puntuales y siempre están un paso adelante recordándome mis obligaciones. Son honestos, profesionales y el trato es completamente personalizado. ¡Totalmente recomendados!</p></blockquote>
+      <figcaption>Laura G. <span>· Profesional independiente</span></figcaption>
+    </figure>
+    <figure class="rv" data-d="2">
+      <blockquote><b>«Profesionalismo y claridad»</b><p>Excelente servicio de asesoría contable y tributaria. Destaco su puntualidad, la claridad para explicar temas complejos y su constante disposición para resolver dudas. Dejar mi contabilidad en sus manos ha sido la mejor decisión para mi negocio.</p></blockquote>
+      <figcaption>Alejandro R.</figcaption>
+    </figure>
   </div>
 </section>
 
