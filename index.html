@@ -326,15 +326,15 @@ textarea{min-height:96px;resize:vertical}
 @media (max-width:900px){.tira{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;height:auto}.tira img:first-child{grid-column:1/3;aspect-ratio:4/3}.tira img{aspect-ratio:1/1}.banda{grid-template-columns:1fr;gap:32px}.banda>div:first-child{grid-column:1;grid-row:1}.banda .retrato{grid-column:1;grid-row:2;width:96px}.banda .retrato img{width:96px;height:120px}}
 
 /* ===== PIE ===== */
-footer{background:var(--ink);color:var(--foot);min-height:92svh;display:grid;grid-template-rows:auto 1fr auto;padding:40px var(--m) 24px}
+footer{background:var(--ink);color:var(--foot);display:grid;grid-template-rows:auto 1fr auto;padding:40px var(--m) 24px}
 footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;font-size:var(--t-s)}
-footer .cols ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer .cols ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;align-content:start}
 footer .cols li:first-child{color:var(--white);font-weight:600}
 footer .cols a{text-decoration:none}
 footer .cols a:hover{color:var(--white);text-decoration:underline}
-footer .marca-g{grid-row:3;margin-top:48px}
+footer .marca-g{grid-row:3;margin-top:72px}
 footer .marca-g svg{width:100%;height:auto;display:block}
-footer .legal{font-size:var(--t-s);margin-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .legal{font-size:var(--t-s);margin-top:20px;padding-right:72px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:900px){footer{min-height:auto}footer .cols{grid-template-columns:1fr 1fr}footer .cols ul{gap:2px}footer .cols a{display:inline-block;padding:9px 0}}
 
 .flota{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.4);transform:scale(.9);opacity:0;pointer-events:none;transition:transform .25s var(--ease-out),opacity .25s ease}
@@ -609,7 +609,7 @@ footer .legal{font-size:var(--t-s);margin-top:20px;display:flex;justify-content:
   </div>
   <div></div>
   <div class="marca-g">
-    <svg viewBox="0 0 1000 150" role="img" aria-label="PHD Consultores"><text x="0" y="122" fill="#fff" font-family="Schibsted Grotesk, sans-serif" font-weight="800" font-size="152" letter-spacing="-5" textLength="1000" lengthAdjust="spacingAndGlyphs">PHD Consultores</text></svg>
+    <svg viewBox="0 0 1000 124" role="img" aria-label="PHD Consultores"><text x="0" y="100" fill="#405e56" font-family="Schibsted Grotesk, sans-serif" font-weight="600" font-size="121" textLength="996" lengthAdjust="spacing">PHD Consultores</text></svg>
     <div class="legal"><span>© <span id="anio">2026</span> PHD Consultores. Contabilidad y tributación para emprendedores y mypes.</span><span>Hecho en Lima</span></div>
   </div>
 </footer>
