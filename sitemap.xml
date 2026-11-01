@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://phdconsultores.pe/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-<url><loc>https://phdconsultores.pe/privacidad.html</loc><priority>0.2</priority></url>
+<url><loc>https://phdconsultores.pe/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/guias/buzon-sol-notificaciones.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/guias/multa-declarar-tarde.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/guias/regimenes-tributarios.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/guias/como-sacar-ruc.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/guias/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/herramientas.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/servicios/formalizacion.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/servicios/planillas.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/servicios/regularizacion.html</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/servicios/</loc><lastmod>2026-11-01</lastmod></url>
+<url><loc>https://phdconsultores.pe/terminos.html</loc><lastmod>2026-11-01</lastmod></url>
 </urlset>

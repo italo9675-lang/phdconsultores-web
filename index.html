@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AccountingService","name":"PHD Consultores","url":"https://phdconsultores.pe/","telephone":"+51943864787","image":"https://phdconsultores.pe/og.png","logo":"https://phdconsultores.pe/img/isotipo-512.png","priceRange":"S/ 150 – S/ 500+","areaServed":{"@type":"City","name":"Lima"},"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"description":"Contabilidad y tributación para emprendedores y mypes: declaraciones SUNAT, SIRE, planillas, revisión de buzón SOL y formalización."}
+{"@context":"https://schema.org","@type":"AccountingService","name":"PHD Consultores","legalName":"PHD CONSULTORES S.A.C.","taxID":"20612286575","url":"https://phdconsultores.pe/","telephone":"+51943864787","image":"https://phdconsultores.pe/og.png","logo":"https://phdconsultores.pe/img/isotipo-512.png","priceRange":"S/ 150 – S/ 500+","areaServed":{"@type":"City","name":"Lima"},"address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"},"description":"Contabilidad y tributación para emprendedores y mypes: declaraciones SUNAT, SIRE, planillas, revisión de buzón SOL y formalización."}
 </script>
 <style>
 :root{
@@ -31,6 +31,7 @@
   --sans:"Montserrat",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
@@ -222,6 +223,20 @@ nav .btn{padding:.65em 1.2em;font-size:.92rem}
 @media (max-width:960px){.tec .grid{grid-template-columns:1fr;gap:48px}.escena{height:520px;max-width:520px}}
 @media (max-width:480px){.telefono{width:236px}.escena .foto{width:80%}}
 
+
+/* QUIÉN ESTÁ DETRÁS */
+.yo .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
+.yo .foto{position:relative;max-width:420px}
+.yo .foto::before{content:"";position:absolute;inset:24px -24px -24px 24px;border-radius:200px 200px 28px 28px;background:var(--sage)}
+.yo .foto img{position:relative;border-radius:200px 200px 28px 28px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.yo .firma{margin-top:26px;font-weight:700;font-size:1.05rem}
+.yo .firma small{display:block;font-weight:500;color:var(--graphite);font-size:.92rem}
+.yo ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.yo li{padding-left:30px;position:relative}
+.yo li::before{content:"";position:absolute;left:4px;top:.5em;width:12px;height:7px;border-left:2.5px solid var(--sage);border-bottom:2.5px solid var(--sage);transform:rotate(-45deg)}
+.yo blockquote{margin:28px 0 0;padding:0 0 0 20px;border-left:3px solid var(--amber);font-size:1.12rem;font-weight:600;color:var(--ink);max-width:52ch}
+@media (max-width:900px){.yo .grid{grid-template-columns:1fr;gap:56px}.yo .foto{max-width:320px;margin:0 auto}}
+
 /* PLANES */
 .planes .cab{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
 .toggle{display:inline-flex;background:#fff;border-radius:999px;padding:5px;border:1px solid var(--fog)}
@@ -245,6 +260,43 @@ nav .btn{padding:.65em 1.2em;font-size:.92rem}
 .plan.dest .btn-wa{background:var(--amber);color:var(--ink);box-shadow:none}
 .nota{color:var(--graphite);font-size:.92rem;margin-top:24px}
 @media (max-width:960px){.planes .grid{grid-template-columns:1fr}}
+
+
+/* COTIZADOR */
+.cotiz{background:#fff;border:1.5px solid var(--fog);border-radius:24px;padding:30px;margin-top:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start}
+.cotiz h3{font-size:1.3rem;font-weight:800}
+.cotiz .p{margin:20px 0 0}
+.cotiz .p>b{display:block;font-size:.95rem;margin-bottom:10px}
+.ops{display:flex;flex-wrap:wrap;gap:8px}
+.ops button{font:600 .9rem var(--sans);border:1.5px solid #c9d2cc;background:#fff;color:var(--ink);border-radius:999px;padding:.55em 1em;cursor:pointer;transition:background .15s,border-color .15s}
+.ops button:hover{border-color:var(--sage)}
+.ops button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cotiz-res{background:var(--ink);color:#fff;border-radius:20px;padding:26px;min-height:100%}
+.cotiz-res .vacio{color:var(--mist);margin:0}
+.cotiz-res .plan-n{font-size:1.5rem;font-weight:800;margin:4px 0}
+.cotiz-res .monto{font:600 2.2rem/1 var(--mono);margin:10px 0 4px}
+.cotiz-res small{color:var(--mist)}
+.cotiz-res p{color:#cfd9d3;font-size:.95rem}
+.cotiz-res .btn{margin-top:12px;width:100%}
+@media (max-width:900px){.cotiz{grid-template-columns:1fr;padding:22px}}
+
+/* AGENDA */
+.pestanas{display:inline-flex;gap:6px;background:var(--paper);border-radius:999px;padding:5px;margin-bottom:18px;max-width:100%}
+.diag .grid>*{min-width:0}
+@media (max-width:420px){.pestanas button{padding:.6em .8em;font-size:.85rem}}
+.pestanas button{font:600 .92rem var(--sans);border:0;background:transparent;padding:.65em 1.1em;border-radius:999px;cursor:pointer;color:var(--graphite)}
+.pestanas button[aria-selected="true"]{background:var(--ink);color:#fff}
+.agenda{background:var(--paper);border-radius:24px;padding:28px}
+.agenda .dias{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.agenda .dias button{flex:none;font:600 .88rem var(--sans);border:1.5px solid #c9d2cc;background:#fff;border-radius:14px;padding:.6em .9em;cursor:pointer;text-align:center;line-height:1.3;color:var(--ink)}
+.agenda .dias button b{display:block;font:600 1.15rem var(--mono)}
+.agenda .dias button[aria-pressed="true"]{background:var(--sage);color:#fff;border-color:var(--sage)}
+.agenda .horas{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin:16px 0}
+.agenda .horas button{font:600 .95rem var(--mono);border:1.5px solid #c9d2cc;background:#fff;border-radius:12px;padding:.6em;cursor:pointer;color:var(--ink)}
+.agenda .horas button[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.agenda .datos{display:grid;gap:14px;margin-top:8px}
+.agenda form{padding:0;background:none;border-radius:0}
+.agenda .info{color:var(--graphite);font-size:.95rem;margin:0}
 
 /* DIAGNÓSTICO */
 .diag{background:var(--white)}
@@ -314,10 +366,10 @@ footer .logo img{height:44px;width:auto}
   <div class="wrap bar">
     <a class="logo" href="#inicio"><img src="img/marca/logo-horizontal.png" alt="PHD Estudio Contable" width="139" height="40"></a>
     <nav aria-label="Principal">
-      <a href="#vencimientos">Vencimientos</a>
-      <a href="#como">Cómo trabajamos</a>
       <a href="#planes">Planes</a>
-      <a href="#preguntas">Preguntas</a>
+      <a href="/herramientas.html">Herramientas</a>
+      <a href="/guias/">Guías</a>
+      <a href="#quien">Nosotros</a>
       <a class="btn btn-wa wa" href="#" data-msg="Hola PHD, quiero mi diagnóstico gratuito.">Escríbenos</a>
     </nav>
   </div>
@@ -415,7 +467,7 @@ footer .logo img{height:44px;width:auto}
 <section id="como">
   <div class="wrap">
     <h2 class="rv">Empezar es simple.</h2>
-    <div class="pasos" id="pasos">
+    <div class="pasos" id="pasos" data-observar>
       <div class="linea"><i></i></div>
       <div class="paso"><span class="num">1</span><h3>Diagnóstico gratis</h3><p>Una llamada de 20 minutos. Revisamos tu situación en SUNAT y te decimos qué te falta y cuánto te costaría.</p></div>
       <div class="paso"><span class="num">2</span><h3>Ordenamos todo</h3><p>Si aún no tienes RUC, te ayudamos a sacarlo. Si ya lo tienes, ponemos al día lo pendiente y te damos acceso a tu carpeta.</p></div>
@@ -436,7 +488,7 @@ footer .logo img{height:44px;width:auto}
         <li class="rv"><img class="ic" src="img/marca/icono-asesoria.png" alt="" width="44" height="44"><div><b>Te explicamos en simple</b><span>Nada de tecnicismos: qué significa cada cifra y qué te conviene.</span></div></li>
       </ul>
     </div>
-    <div class="escena" id="escena" aria-hidden="true">
+    <div class="escena" id="escena" aria-hidden="true" data-observar>
       <div class="foto"><img src="img/fotos/c1_s7-800.webp" alt="" loading="lazy"></div>
       <div class="telefono"><div class="pant">
         <div class="top"><img src="img/isotipo-96.png" alt="">PHD Consultores</div>
@@ -448,6 +500,24 @@ footer .logo img{height:44px;width:auto}
   </div>
 </section>
 
+<section class="yo" id="quien">
+  <div class="wrap grid">
+    <div class="foto rv"><img src="img/fotos/italo-800.webp" alt="Italo, fundador de PHD Consultores" width="800" height="800" loading="lazy"></div>
+    <div>
+      <h2 class="rv">Detrás de PHD hay una persona, no un call center.</h2>
+      <p class="lead rv">Soy Italo, fundador de PHD. Trabajo como coordinador de contabilidad en un grupo empresarial del sector minero-industrial, donde llevo cierres mensuales, NIIF y tributación. Creé PHD para que los emprendedores tengan ese mismo rigor, con un trato cercano y a un precio justo.</p>
+      <ul class="rv">
+        <li>Especialista en tributación peruana y NIIF</li>
+        <li>Experiencia en contabilidad de empresas medianas y grandes</li>
+        <li>Automatizo procesos contables para que nada se pase por alto</li>
+      </ul>
+      <blockquote class="rv">“Mi meta es simple: que nunca más te enteres de una multa por sorpresa.”</blockquote>
+      <p class="firma rv">Italo<small>Fundador de PHD Consultores</small></p>
+      <a class="btn btn-wa wa rv" href="#" data-msg="Hola Italo, quiero conversar sobre mi negocio." style="margin-top:8px">Habla conmigo por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
 <section class="planes" id="planes">
   <div class="wrap">
     <div class="cab">
@@ -455,6 +525,15 @@ footer .logo img{height:44px;width:auto}
       <div class="toggle rv" role="group" aria-label="Mostrar precios">
         <button type="button" aria-pressed="true" data-igv="0">Sin IGV</button><button type="button" aria-pressed="false" data-igv="1">Con IGV</button>
       </div>
+    </div>
+    <div class="cotiz rv" id="cotizador">
+      <div>
+        <h3>¿No sabes qué plan te toca? Responde 3 preguntas.</h3>
+        <div class="p"><b>¿Ya tienes RUC?</b><div class="ops" data-q="ruc"><button type="button" data-v="si">Sí</button><button type="button" data-v="no">Todavía no</button></div></div>
+        <div class="p"><b>¿Cuánto vendes al mes, aproximadamente?</b><div class="ops" data-q="ventas"><button type="button" data-v="1">Hasta S/ 8 mil</button><button type="button" data-v="2">S/ 8 mil a 40 mil</button><button type="button" data-v="3">S/ 40 mil a 140 mil</button><button type="button" data-v="4">Más de S/ 140 mil</button></div></div>
+        <div class="p"><b>¿Cuántos trabajadores tienes en planilla?</b><div class="ops" data-q="trab"><button type="button" data-v="0">Ninguno</button><button type="button" data-v="1">1 a 3</button><button type="button" data-v="2">4 o más</button></div></div>
+      </div>
+      <div class="cotiz-res" aria-live="polite"><p class="vacio">Tu plan recomendado y su precio aparecen aquí.</p></div>
     </div>
     <div class="grid">
       <article class="plan rv">
@@ -506,10 +585,33 @@ footer .logo img{height:44px;width:auto}
   <div class="wrap grid">
     <div class="rv">
       <h2>Pide tu diagnóstico gratuito.</h2>
-      <p class="lead">Déjanos tus datos y te escribimos por WhatsApp hoy mismo. Sin compromiso.</p>
+      <p class="lead">Agenda una llamada de 20 minutos en el horario que prefieras, o déjanos tus datos y te escribimos hoy. Sin compromiso.</p>
       <div class="foto"><img src="img/fotos/c2_s7-800.webp" alt="Asesor revisando un documento en su escritorio" loading="lazy"></div>
     </div>
-    <form id="form" class="rv" data-d="1" novalidate>
+    <div class="rv" data-d="1">
+    <div class="pestanas" role="tablist">
+      <button type="button" role="tab" aria-selected="true" data-tab="agenda">Agenda una llamada</button>
+      <button type="button" role="tab" aria-selected="false" data-tab="form">Prefiero que me escriban</button>
+    </div>
+    <div class="agenda" id="agenda">
+      <p class="info">Elige el día y la hora para tu diagnóstico gratuito de 20 minutos. Te llamamos a tu WhatsApp.</p>
+      <div class="dias" role="group" aria-label="Día"></div>
+      <div class="horas" role="group" aria-label="Hora"></div>
+      <form class="datos" id="reserva" novalidate hidden>
+        <div class="dos">
+          <label>Nombre<input name="nombre" autocomplete="name" maxlength="80" required></label>
+          <label>Celular (WhatsApp)<input name="whatsapp" type="tel" inputmode="numeric" placeholder="9XX XXX XXX" maxlength="15" required></label>
+        </div>
+        <label>¿Qué necesitas?
+          <select name="plan"><option value="Formalizarme">Formalizarme / sacar RUC</option><option value="Esencial">Plan Esencial</option><option value="Crece">Plan Crece</option><option value="Empresa">Plan Empresa</option><option value="No sé" selected>Aún no sé</option></select>
+        </label>
+        <div class="trampa" aria-hidden="true"><label>Web<input name="web" tabindex="-1" autocomplete="off"></label></div>
+        <label class="check"><input type="checkbox" name="acepta" required> <span>Autorizo a PHD Consultores a usar mis datos para contactarme, según su <a href="privacidad.html">política de privacidad</a>.</span></label>
+        <button class="btn btn-wa" type="submit" style="justify-content:center">Confirmar mi cita</button>
+      </form>
+      <p class="estado" role="status"></p>
+    </div>
+    <form id="form" novalidate hidden>
       <div class="dos">
         <label>Nombre<input name="nombre" autocomplete="name" required maxlength="80"></label>
         <label>Celular (WhatsApp)<input name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="9XX XXX XXX" required maxlength="15"></label>
@@ -532,6 +634,7 @@ footer .logo img{height:44px;width:auto}
       <button class="btn btn-wa" type="submit" style="justify-content:center">Pedir mi diagnóstico</button>
       <p class="estado" role="status"></p>
     </form>
+    </div>
   </div>
 </section>
 
@@ -565,56 +668,31 @@ footer .logo img{height:44px;width:auto}
     <div>
       <a class="logo" href="#inicio"><img src="img/marca/logo-horizontal-blanco.png" alt="PHD Estudio Contable" width="139" height="40"></a>
       <p style="margin:12px 0 0">Contabilidad y tributación para emprendedores y mypes · Lima, Perú</p>
+      <p style="margin:12px 0 0;display:flex;gap:18px;flex-wrap:wrap"><a href="/herramientas.html" style="color:#cfd9d3">Herramientas</a><a href="/guias/" style="color:#cfd9d3">Guías</a><a href="/servicios/" style="color:#cfd9d3">Servicios</a><a href="#planes" style="color:#cfd9d3">Planes</a></p>
     </div>
     <div>
       <p style="margin:0">WhatsApp: <a class="wa" href="#" data-msg="Hola PHD, quiero información.">943 864 787</a></p>
-      <p style="margin:6px 0 0"><a href="privacidad.html">Política de privacidad</a> · © <span id="anio">2026</span> PHD Consultores</p>
+      <p style="margin:6px 0 0">PHD CONSULTORES S.A.C. · RUC 20612286575</p>
+      <p style="margin:6px 0 0"><a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a> · © <span id="anio">2026</span> PHD Consultores</p>
     </div>
   </div>
 </footer>
 
 <a class="flota wa" id="flota" href="#" data-msg="Hola PHD, quiero mi diagnóstico gratuito." aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg></a>
 
+<script src="js/sitio.js"></script>
 <script>
 (function(){
   "use strict";
-  var WA = "51943864787";
-  var ENDPOINT = "https://script.google.com/macros/s/AKfycbyX_flloFxOlTQdF_nGgXb5GxShjPBbkPWU_z3XPwpqZJbcjWqN2OOwdcDet0SHn6Sa/exec";
-  var reducir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var qs = location.search.slice(1);
-  var origen = (qs.match(/utm_[^&]+/g) || []).join("&") || (document.referrer ? "ref=" + document.referrer.replace(/^https?:\/\//, "").split("/")[0] : "directo");
+  var P = window.PHD, wa = P.wa, ENDPOINT = P.ENDPOINT, reducir = P.reducir, origen = P.origen;
 
-  function wa(msg){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); }
-  document.querySelectorAll(".wa").forEach(function(a){
-    a.href = wa(a.getAttribute("data-msg") || "Hola PHD");
-    a.target = "_blank"; a.rel = "noopener";
-  });
-  document.getElementById("anio").textContent = new Date().getFullYear();
-
-  /* cabecera sólida, botón flotante y parallax de la foto principal */
-  var cab = document.getElementById("cab"), flota = document.getElementById("flota"), par = document.getElementById("parallax"), tic = false;
-  function alDesplazar(){
-    var y = window.scrollY;
-    cab.classList.toggle("solid", y > 20);
-    flota.classList.toggle("on", y > 500);
-    if (!reducir && par && y < 1000) par.style.setProperty("--py", (-y * 0.12) + "px");
-    tic = false;
-  }
-  window.addEventListener("scroll", function(){ if (!tic){ tic = true; requestAnimationFrame(alDesplazar); } }, { passive: true });
-  alDesplazar();
+  /* parallax de la foto principal */
+  var par = document.getElementById("parallax"), tic = false;
+  function parallax(){ if (!reducir && par && scrollY < 1000) par.style.setProperty("--py", (-scrollY * 0.12) + "px"); tic = false; }
+  window.addEventListener("scroll", function(){ if (!tic){ tic = true; requestAnimationFrame(parallax); } }, { passive: true });
 
   /* chips: pasan a flotar después de entrar */
-  setTimeout(function(){ document.querySelectorAll(".chip").forEach(function(c, i){ if (!reducir) setTimeout(function(){ c.style.opacity = 1; c.classList.add("vivo"); c.style.animationDelay = (i * -2) + "s"; }, 0); }); }, 2600);
-
-  /* apariciones */
-  var obs = "IntersectionObserver" in window ? new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); obs.unobserve(e.target); } });
-  }, { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }) : null;
-  document.querySelectorAll(".rv, #pasos, #escena").forEach(function(el){ obs ? obs.observe(el) : el.classList.add("in"); });
-
-  /* preguntas: una abierta a la vez */
-  var dets = document.querySelectorAll("details");
-  dets.forEach(function(d){ d.addEventListener("toggle", function(){ if (d.open) dets.forEach(function(o){ if (o !== d) o.open = false; }); }); });
+  setTimeout(function(){ if (reducir) return; document.querySelectorAll(".chip").forEach(function(c, i){ c.style.opacity = 1; c.classList.add("vivo"); c.style.animationDelay = (i * -2) + "s"; }); }, 2600);
 
   /* precios con o sin IGV */
   document.querySelectorAll(".toggle button").forEach(function(b){
@@ -685,7 +763,99 @@ footer .logo img{height:44px;width:auto}
     html += '<a class="avisame" target="_blank" rel="noopener" href="' + wa("Hola PHD, mi RUC termina en " + d + ". Quiero que me avisen antes de cada vencimiento.") + '">Quiero que me avisen cada mes por WhatsApp</a></div>';
     res.innerHTML = html;
     var n = res.querySelector(".faltan .n"); if (n) contar(n, dias);
+    P.medir("calculadora", String(d));
   }
+
+
+  /* Cotizador */
+  var resp = {}, cres = document.querySelector(".cotiz-res");
+  document.querySelectorAll("#cotizador .ops").forEach(function(g){
+    g.addEventListener("click", function(ev){
+      var b = ev.target.closest("button"); if (!b) return;
+      g.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      resp[g.getAttribute("data-q")] = b.getAttribute("data-v");
+      cotizar();
+    });
+  });
+  function cotizar(){
+    if (!resp.ventas || !resp.trab){ cres.innerHTML = '<p class="vacio">' + (resp.ruc || resp.ventas || resp.trab ? "Responde las 3 preguntas para ver tu plan." : "Tu plan recomendado y su precio aparecen aquí.") + "</p>"; return; }
+    var v = +resp.ventas, t = +resp.trab, plan, precio, desde = false, por;
+    if (v === 4 || t === 2){ plan = "Empresa"; precio = 500; desde = true; por = "Por tu volumen de ventas o de personal necesitas libros completos y estados financieros."; }
+    else if (t === 1 || v === 3){ plan = "Crece"; precio = 300; por = t === 1 ? "Incluye tu planilla electrónica PLAME y las boletas de tus trabajadores." : "Con ese nivel de ventas te conviene un estado de resultados cada mes."; }
+    else { plan = "Esencial"; precio = 150; por = "Cubre tus declaraciones, tus registros SIRE y la revisión diaria de tu buzón SOL."; }
+    var extra = resp.ruc === "no" ? "<p>Como aún no tienes RUC, empezamos formalizándote y eligiendo el régimen que más te conviene.</p>" : "";
+    var msg = "Hola PHD, hice el cotizador: " + (resp.ruc === "no" ? "aún no tengo RUC, " : "") + "vendo " + ["", "hasta S/ 8 mil", "entre S/ 8 mil y 40 mil", "entre S/ 40 mil y 140 mil", "más de S/ 140 mil"][v] + " al mes y tengo " + ["ningún trabajador", "de 1 a 3 trabajadores", "4 o más trabajadores"][t] + ". Me salió el plan " + plan + ".";
+    cres.innerHTML = '<small>Tu plan recomendado</small><div class="plan-n">' + plan + '</div><div class="monto">' + (desde ? '<small style="font-family:var(--sans);font-size:.9rem">desde </small>' : "") + "S/ " + precio + '</div><small>al mes + IGV (S/ ' + Math.round(precio * 1.18) + ' con IGV)</small><p>' + por + "</p>" + extra +
+      '<a class="btn btn-wa" target="_blank" rel="noopener" href="' + wa(msg) + '">Lo quiero: escribir por WhatsApp</a><a class="btn btn-light" href="#diagnostico" style="margin-top:8px">Agendar mi diagnóstico gratis</a>';
+    P.medir("cotizador", plan);
+  }
+
+  /* Pestañas del diagnóstico */
+  var tabs = document.querySelectorAll(".pestanas button"), agenda = document.getElementById("agenda"), formMsg = document.getElementById("form");
+  tabs.forEach(function(b){ b.addEventListener("click", function(){
+    tabs.forEach(function(x){ x.setAttribute("aria-selected", x === b ? "true" : "false"); });
+    var ag = b.getAttribute("data-tab") === "agenda"; agenda.hidden = !ag; formMsg.hidden = ag; if (ag) cargarHorarios();
+  }); });
+
+  /* Agenda: horarios libres del calendario de PHD */
+  var DSEM = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"], MCORTO = ["ene","feb","mar","abr","may","jun","jul","ago","set","oct","nov","dic"];
+  var cajaDias = agenda.querySelector(".dias"), cajaHoras = agenda.querySelector(".horas"), reserva = document.getElementById("reserva"), estA = agenda.querySelector(".estado");
+  var elegido = null, cargado = false;
+  function horaLima(iso){ var d = new Date(new Date(iso).getTime() - 5 * 3600e3); return ("0" + d.getUTCHours()).slice(-2) + ":" + ("0" + d.getUTCMinutes()).slice(-2); }
+  function sinAgenda(){
+    cajaDias.innerHTML = ""; cajaHoras.innerHTML = "";
+    estA.className = "estado"; estA.innerHTML = 'No pudimos cargar los horarios. <a target="_blank" rel="noopener" href="' + wa("Hola PHD, quiero agendar mi diagnóstico gratuito.") + '">Agenda por WhatsApp</a>.';
+  }
+  function cargarHorarios(){
+    if (cargado) return; cargado = true;
+    estA.textContent = "Cargando horarios…";
+    fetch(ENDPOINT + "?accion=horarios").then(function(r){ return r.json(); }).then(function(j){
+      if (!j.ok || !j.dias || !j.dias.length) return sinAgenda();
+      estA.textContent = "";
+      cajaDias.innerHTML = j.dias.map(function(d, i){
+        var f = new Date(d.fecha + "T12:00:00Z");
+        return '<button type="button" aria-pressed="' + (i === 0) + '" data-i="' + i + '">' + DSEM[f.getUTCDay()] + "<b>" + f.getUTCDate() + "</b>" + MCORTO[f.getUTCMonth()] + "</button>";
+      }).join("");
+      function verDia(i){
+        cajaDias.querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", +b.getAttribute("data-i") === i ? "true" : "false"); });
+        cajaHoras.innerHTML = j.dias[i].slots.map(function(s){ return '<button type="button" aria-pressed="false" data-s="' + s + '">' + horaLima(s) + "</button>"; }).join("");
+        elegido = null; reserva.hidden = true;
+      }
+      cajaDias.onclick = function(ev){ var b = ev.target.closest("button"); if (b) verDia(+b.getAttribute("data-i")); };
+      cajaHoras.onclick = function(ev){
+        var b = ev.target.closest("button"); if (!b) return;
+        cajaHoras.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        elegido = b.getAttribute("data-s"); reserva.hidden = false; reserva.elements.nombre.focus();
+      };
+      verDia(0);
+    }).catch(sinAgenda);
+  }
+  if ("IntersectionObserver" in window){
+    var oA = new IntersectionObserver(function(es){ if (es[0].isIntersecting){ cargarHorarios(); oA.disconnect(); } }, { rootMargin: "300px" });
+    oA.observe(agenda);
+  } else cargarHorarios();
+
+  reserva.addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = reserva.elements, tel = f.whatsapp.value.replace(/\D/g, "").replace(/^51(?=9\d{8}$)/, "");
+    function err(t){ estA.className = "estado err"; estA.textContent = t; }
+    if (!elegido) return err("Elige una hora.");
+    if (f.nombre.value.trim().length < 2) return err("Escribe tu nombre.");
+    if (!/^9\d{8}$/.test(tel)) return err("Escribe un celular de 9 dígitos que empiece con 9.");
+    if (!f.acepta.checked) return err("Marca la casilla de autorización para continuar.");
+    var btn = reserva.querySelector("button[type=submit]"); btn.disabled = true; estA.className = "estado"; estA.textContent = "Reservando…";
+    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({
+      tipo: "reserva", inicio: elegido, nombre: f.nombre.value.trim(), whatsapp: tel, plan: f.plan.value, acepta: true, web: f.web.value, origen: origen
+    }) }).then(function(r){ return r.json(); }).then(function(j){
+      if (j.ok){
+        P.conversion("Schedule");
+        agenda.innerHTML = '<p class="info" style="font-size:1.1rem;color:var(--ink)"><b>¡Listo, ' + f.nombre.value.trim().split(" ")[0] + '!</b><br>Tu diagnóstico quedó agendado para el <b>' + j.cuando + '</b>. Te escribiremos por WhatsApp para confirmarlo.</p>';
+      } else {
+        err(j.error || "No se pudo reservar. Intenta otra hora.");
+        if (j.ocupado){ cargado = false; cargarHorarios(); }
+      }
+    }).catch(function(){ sinAgenda(); }).then(function(){ btn.disabled = false; });
+  });
 
   /* Formulario */
   var form = document.getElementById("form"), estado = form.querySelector(".estado");
@@ -707,7 +877,7 @@ footer .logo img{height:44px;width:auto}
     fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(datos) })
       .then(function(r){ return r.json(); })
       .then(function(j){
-        if (j.ok){ form.reset(); aviso("¡Listo, " + datos.nombre.split(" ")[0] + "! Te escribimos por WhatsApp hoy mismo.", "ok"); }
+        if (j.ok){ P.medir("formulario", datos.plan); P.conversion("Lead"); form.reset(); aviso("¡Listo, " + datos.nombre.split(" ")[0] + "! Te escribimos por WhatsApp hoy mismo.", "ok"); }
         else { aviso(j.error || "No se pudo enviar. Escríbenos por WhatsApp.", "err"); }
       })
       .catch(function(){ aviso("No se pudo enviar desde aquí. Te abrimos WhatsApp.", "err"); window.open(wa(msgWa), "_blank", "noopener"); })

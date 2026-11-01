@@ -1,0 +1,55 @@
+<!--
+titulo: Herramientas tributarias gratis para emprendedores
+h1: Herramientas gratis para tu negocio
+descripcion: Calcula qué régimen tributario te conviene, cuánto IGV pagarás este mes y de cuánto sería tu multa por declarar tarde ante SUNAT. Gratis y actualizado a 2026.
+ruta: /herramientas.html
+lead: Calculadoras actualizadas a 2026 para que sepas cuánto te toca pagar a SUNAT antes de que llegue la fecha. Gratis y sin registrarte.
+-->
+<section style="padding-top:56px"><div class="wrap" style="max-width:980px">
+<nav class="opciones" aria-label="Herramientas" style="margin-bottom:28px">
+  <a class="btn btn-line" href="#regimen" style="padding:.6em 1.1em;font-size:.92rem">¿Qué régimen me conviene?</a>
+  <a class="btn btn-line" href="#igv" style="padding:.6em 1.1em;font-size:.92rem">IGV del mes</a>
+  <a class="btn btn-line" href="#multa" style="padding:.6em 1.1em;font-size:.92rem">Multa por declarar tarde</a>
+  <a class="btn btn-line" href="/#vencimientos" style="padding:.6em 1.1em;font-size:.92rem">Fecha de vencimiento</a>
+</nav>
+
+<article class="herr rv" id="regimen">
+  <h2>¿Qué régimen tributario me conviene?</h2>
+  <p class="desc">Ingresa tus ventas y compras de un mes normal, sin IGV. Te mostramos en qué regímenes puedes estar y cuánto pagarías al mes en cada uno.</p>
+  <div class="campos">
+    <label>¿Quién eres?<select id="r-tipo"><option value="pn">Persona natural con negocio</option><option value="pj">Empresa (S.A.C., E.I.R.L., S.R.L.)</option></select></label>
+    <label>Ventas al mes <small>(sin IGV, S/)</small><input id="r-ventas" type="number" min="0" step="100" inputmode="decimal" placeholder="Ej.: 12000"></label>
+    <label>Compras y gastos al mes <small>(sin IGV, S/)</small><input id="r-compras" type="number" min="0" step="100" inputmode="decimal" placeholder="Ej.: 7000"></label>
+    <label>Tus clientes son…<select id="r-clientes"><option value="personas">Sobre todo personas (boletas)</option><option value="empresas">También empresas (piden factura)</option></select></label>
+    <label>Tu actividad es…<select id="r-act"><option value="comercio">Comercio, restaurante o producción</option><option value="servicio">Servicios en general</option><option value="profesional">Servicio profesional (médico, contable, legal, ingeniería, informática, asesoría)</option><option value="excluida">Construcción o transporte de carga</option></select></label>
+  </div>
+  <div class="resultado" id="r-res" aria-live="polite"><p class="vacio">Completa tus ventas y compras para ver el resultado.</p></div>
+  <p class="aviso-legal">Estimación referencial con las reglas vigentes en 2026 (UIT S/ 5,500, IGV 18%). No considera todas las exclusiones ni tu renta anual. Revisa tu caso con un profesional.</p>
+</article>
+
+<article class="herr rv" id="igv">
+  <h2>¿Cuánto IGV pago este mes?</h2>
+  <p class="desc">El IGV que pagas es el de tus ventas menos el que ya pagaste en tus compras (crédito fiscal), siempre que tengas factura de esas compras.</p>
+  <div class="campos">
+    <label>Ventas del mes <small>(S/)</small><input id="i-ventas" type="number" min="0" step="10" inputmode="decimal" placeholder="Ej.: 11800"></label>
+    <label>Compras con factura <small>(S/)</small><input id="i-compras" type="number" min="0" step="10" inputmode="decimal" placeholder="Ej.: 5900"></label>
+    <label>Saldo a favor del mes anterior <small>(S/, opcional)</small><input id="i-saldo" type="number" min="0" step="10" inputmode="decimal" placeholder="0"></label>
+    <label>Los montos que escribí…<select id="i-modo"><option value="con">Incluyen IGV (total del comprobante)</option><option value="sin">No incluyen IGV (valor de venta)</option></select></label>
+    <label>Tasa<select id="i-tasa"><option value="0.18">18% general</option><option value="0.105">10.5% restaurantes y hoteles MYPE</option></select></label>
+  </div>
+  <div class="resultado" id="i-res" aria-live="polite"><p class="vacio">Escribe tus ventas del mes para calcular.</p></div>
+  <p class="aviso-legal">En 2026 el 18% se compone de IGV 15.5% e Impuesto de Promoción Municipal 2.5%. La tasa reducida de 10.5% solo aplica a restaurantes, hoteles y alojamientos MYPE que cumplen los requisitos de la Ley 31556. Si estás en el NRUS no pagas IGV aparte: pagas tu cuota.</p>
+</article>
+
+<article class="herr rv" id="multa">
+  <h2>¿De cuánto es la multa por declarar tarde?</h2>
+  <p class="desc">Si no presentaste tu declaración mensual a tiempo, SUNAT aplica una multa (artículo 176, numeral 1 del Código Tributario). La buena noticia: si regularizas pronto, la rebaja puede llegar al 100%.</p>
+  <div class="campos">
+    <label>Tu régimen<select id="m-reg"><option value="general">Régimen General o MYPE Tributario</option><option value="rer">Régimen Especial (RER)</option><option value="nrus">Nuevo RUS (NRUS)</option></select></label>
+    <label>Tus ingresos del año pasado<select id="m-ing"><option value="1">Hasta S/ 104,500 (19 UIT)</option><option value="2">De S/ 104,500 a S/ 825,000 (150 UIT)</option><option value="3">Más de S/ 825,000</option></select></label>
+  </div>
+  <div class="resultado" id="m-res" aria-live="polite"></div>
+  <p class="aviso-legal">Referencial, según el régimen de gradualidad (RS 063-2007/SUNAT y modificatorias, incluida la RS 007-2025/SUNAT) y la UIT 2026. Para no perder la rebaja hay que presentar la declaración y, si corresponde, pagar el impuesto con intereses (0.90% mensual). Escríbenos y lo calculamos exacto para tu caso.</p>
+</article>
+{{CTA}}
+</div></section>
