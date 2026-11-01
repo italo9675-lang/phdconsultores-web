@@ -389,7 +389,7 @@ footer .logo b{color:var(--mist)}
   "use strict";
   var WA = "51943864787";
   // URL de la aplicación web del Director (Apps Script). Si queda vacía, el formulario abre WhatsApp.
-  var ENDPOINT = "";
+  var ENDPOINT = "https://script.google.com/macros/s/AKfycbyX_flloFxOlTQdF_nGgXb5GxShjPBbkPWU_z3XPwpqZJbcjWqN2OOwdcDet0SHn6Sa/exec";
   var qs = location.search.slice(1);
   var origen = (qs.match(/utm_[^&]+/g) || []).join("&") || (document.referrer ? "ref=" + document.referrer.replace(/^https?:\/\//, "").split("/")[0] : "directo");
 
