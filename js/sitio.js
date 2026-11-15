@@ -56,7 +56,10 @@
   var obs = "IntersectionObserver" in window ? new IntersectionObserver(function(es){
     es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); obs.unobserve(e.target); } });
   }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }) : null;
-  document.querySelectorAll(".rv, [data-observar]").forEach(function(el){ obs ? obs.observe(el) : el.classList.add("in"); });
+  /* el contenido se oculta para animarlo solo si este script corre; lo que ya está a la vista se muestra de inmediato */
+  document.querySelectorAll(".rv").forEach(function(el){ if (el.getBoundingClientRect().top < innerHeight) el.classList.add("in"); });
+  document.documentElement.classList.add("js");
+  document.querySelectorAll(".rv, [data-observar]").forEach(function(el){ if (el.classList.contains("in")) return; obs ? obs.observe(el) : el.classList.add("in"); });
   var dets = document.querySelectorAll("details");
   dets.forEach(function(d){ d.addEventListener("toggle", function(){ if (d.open) dets.forEach(function(o){ if (o !== d && o.parentNode === d.parentNode) o.open = false; }); }); });
   var anio = document.getElementById("anio"); if (anio) anio.textContent = new Date().getFullYear();
