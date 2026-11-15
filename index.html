@@ -372,6 +372,39 @@ footer .legal{font-size:var(--t-s);margin-top:20px;padding-right:72px;display:fl
   @keyframes fundido{from{opacity:0}to{opacity:1}}
 }
 .hero:focus{outline:none;box-shadow:none}
+
+.btn-zierra{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-zierra .zi{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:5px;background:#01162f;flex:none}
+.btn-zierra .zi svg{width:17px!important;height:17px!important}
+@media (hover:hover) and (pointer:fine){.btn-zierra:hover{background:var(--fog2)}}
+.cab .acc{gap:10px}
+header.fijo .btn-zierra{margin-right:0}
+header.fijo .btn-zierra + .btn{margin-left:10px}
+@media (max-width:640px){.cab .acc .btn-ink,header.fijo .btn-ink{display:none}}
+.zr{background:var(--ink);color:#fff;padding:clamp(72px,9vw,140px) var(--m);position:relative;overflow:hidden}
+.zr::before{content:"";position:absolute;width:640px;height:640px;left:-200px;top:-120px;border-radius:50%;background:radial-gradient(closest-side,rgba(215,249,118,.10),rgba(215,249,118,0));pointer-events:none}
+.zr .fila{position:relative;display:grid;grid-template-columns:calc(var(--eje) - var(--m)) 1fr;gap:clamp(32px,4vw,64px);align-items:center}
+.zr .k{display:flex;align-items:center;gap:12px;color:var(--on-ink);font-size:var(--t-s);font-weight:600;margin-bottom:28px}
+.zr .k svg{height:26px;width:auto}
+.zr .k i{width:1px;height:22px;background:rgba(255,255,255,.35)}
+.zr .k em{font-style:normal;color:#d7f976;font-size:18px;font-weight:500}
+.zr h2{font-size:var(--t-h);line-height:1.05;margin:0 0 18px;max-width:14ch}
+.zr h2 span{color:#d7f976}
+.zr p.lead{font-size:var(--t-l);line-height:1.45;color:var(--on-ink);max-width:40ch;margin:0 0 26px}
+.zr ul{list-style:none;margin:0 0 34px;padding:0;display:grid;gap:12px}
+.zr li{display:flex;gap:10px;align-items:flex-start;color:var(--on-sage-hi)}
+.zr li svg{flex:none;width:18px;height:18px;margin-top:3px;color:#d7f976}
+.zr .bts{display:flex;flex-wrap:wrap;gap:12px}
+.zr .btn-lima{background:#d7f976;color:#01162f}
+@media (hover:hover) and (pointer:fine){.zr .btn-lima:hover{background:#e9fbb0}}
+.zr .btn-borde{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
+@media (hover:hover) and (pointer:fine){.zr .btn-borde:hover{box-shadow:inset 0 0 0 1.5px #fff}}
+.zr .pantalla{border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.12)}
+.zr .barra{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;background:var(--ink3)}
+.zr .barra i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25)}
+.zr .barra span{margin-left:10px;font-size:12px;color:var(--on-ink2)}
+.zr .pantalla img{display:block;width:100%;height:auto}
+@media (max-width:900px){.zr .fila{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -379,16 +412,16 @@ footer .legal{font-size:var(--t-s);margin-top:20px;padding-right:72px;display:fl
 
 <header class="fijo" id="cab" aria-label="Navegación">
   <a class="marca" href="#inicio"><img src="img/marca/logo-horizontal-blanco.png" alt="PHD Estudio Contable" width="111" height="32"></a>
-  <nav aria-label="Principal"><a href="#planes">Planes</a><a href="/herramientas.html">Herramientas</a><a href="/guias/">Guías</a><a href="#quien">Nosotros</a></nav>
-  <a class="btn btn-ink" href="#diagnostico">Agendar diagnóstico</a>
+  <nav aria-label="Principal"><a href="#planes">Planes</a><a href="/herramientas.html">Herramientas</a><a href="/guias/">Guías</a><a href="#quien">Nosotros</a><a href="#zierra">ZIERRA</a></nav>
+  <a class="btn btn-zierra" href="https://zierra.phdconsultores.pe"><span class="zi" aria-hidden="true"><svg viewBox="180 170 420 415"><defs><linearGradient id="zb-al1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#DFFA85"/><stop offset="1" stop-color="#CAEF58"/></linearGradient><linearGradient id="zb-as1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#D7DADE"/></linearGradient></defs><path d="M 273.32 180.04 L 583.4 180.04 C 587.24 180.04 589.64 182.44 589.64 186.28 L 589.64 199.24 L 325.16 455.08 L 270.92 401.32 L 419.72 257.32 L 195.08 257.32 Z" fill="url(#zb-al1)"/><path d="M 243.08 433 L 388.04 574.6 L 201.32 574.6 C 194.12 574.6 189.8 569.8 189.8 562.6 L 189.8 486.76 Z" fill="url(#zb-al1)"/><path d="M 270.92 507.88 L 292.52 486.76 L 338.12 532.36 L 520.52 330.76 C 522.44 328.84 524.36 329.8 524.36 333.16 L 524.36 422.44 L 434.6 510.28 L 587.72 510.28 L 521 574.6 L 337.16 574.6 Z" fill="url(#zb-as1)"/><path d="M 270.92 507.88 L 292.52 486.76 L 379.4 574.6 L 337.16 574.6 Z" fill="#FFFFFF"/></svg></span>Ingresar a ZIERRA</a><a class="btn btn-ink" href="#diagnostico">Agendar diagnóstico</a>
 </header>
 
 <main id="inicio">
 <div class="mast" aria-hidden="false">
   <header class="cab">
     <a class="marca" href="#inicio"><img src="img/marca/logo-horizontal-blanco.png" alt="PHD Estudio Contable" width="132" height="38"></a>
-    <nav class="tab" aria-label="Secciones"><a href="#planes">Planes</a><a href="/herramientas.html">Herramientas</a><a href="/guias/">Guías</a></nav>
-    <div class="acc"><a class="btn btn-ink" href="#diagnostico">Agendar diagnóstico</a></div>
+    <nav class="tab" aria-label="Secciones"><a href="#planes">Planes</a><a href="/herramientas.html">Herramientas</a><a href="/guias/">Guías</a><a href="#zierra">ZIERRA</a></nav>
+    <div class="acc"><a class="btn btn-zierra" href="https://zierra.phdconsultores.pe"><span class="zi" aria-hidden="true"><svg viewBox="180 170 420 415"><defs><linearGradient id="zb-al2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#DFFA85"/><stop offset="1" stop-color="#CAEF58"/></linearGradient><linearGradient id="zb-as2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#D7DADE"/></linearGradient></defs><path d="M 273.32 180.04 L 583.4 180.04 C 587.24 180.04 589.64 182.44 589.64 186.28 L 589.64 199.24 L 325.16 455.08 L 270.92 401.32 L 419.72 257.32 L 195.08 257.32 Z" fill="url(#zb-al2)"/><path d="M 243.08 433 L 388.04 574.6 L 201.32 574.6 C 194.12 574.6 189.8 569.8 189.8 562.6 L 189.8 486.76 Z" fill="url(#zb-al2)"/><path d="M 270.92 507.88 L 292.52 486.76 L 338.12 532.36 L 520.52 330.76 C 522.44 328.84 524.36 329.8 524.36 333.16 L 524.36 422.44 L 434.6 510.28 L 587.72 510.28 L 521 574.6 L 337.16 574.6 Z" fill="url(#zb-as2)"/><path d="M 270.92 507.88 L 292.52 486.76 L 379.4 574.6 L 337.16 574.6 Z" fill="#FFFFFF"/></svg></span>Ingresar a ZIERRA</a><a class="btn btn-ink" href="#diagnostico">Agendar diagnóstico</a></div>
   </header>
   <div class="tile c1"><img src="img/fotos/cover_vie-1200.webp" alt="Contadora entregando documentos a una emprendedora" width="1127" height="1400"></div>
   <div class="tile c2 t-sage"><img src="img/glifo-blanco.png" alt="" width="220" height="256"></div>
@@ -462,6 +495,19 @@ footer .legal{font-size:var(--t-s);margin-top:20px;padding-right:72px;display:fl
     <div class="rv"><b>Junta</b><p>Fotos de tus boletas y facturas, cuando puedas, por WhatsApp o correo.</p></div>
     <div class="rv" data-d="1"><b>Ordenamos</b><p>Registramos compras y ventas en SIRE y revisamos que todo cuadre.</p></div>
     <div class="rv" data-d="2"><b>Declaramos</b><p>Presentamos a tiempo y la constancia llega a tu carpeta digital.</p></div>
+  </div>
+</section>
+
+<section class="zr" id="zierra" aria-labelledby="t-zr">
+  <div class="fila">
+    <div class="rv">
+      <div class="k"><svg role="img" aria-label="ZIERRA Estudio" height="26" viewBox="180 170 1740 415" style="display: block; width: auto;"><defs><linearGradient id="al" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#DFFA85"/><stop offset="1" stop-color="#CAEF58"/></linearGradient><linearGradient id="as" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#D7DADE"/></linearGradient></defs><path d="M 273.32 180.04 L 583.4 180.04 C 587.24 180.04 589.64 182.44 589.64 186.28 L 589.64 199.24 L 325.16 455.08 L 270.92 401.32 L 419.72 257.32 L 195.08 257.32 Z" fill="url(#al)" fill-rule="evenodd"></path><path d="M 243.08 433 L 388.04 574.6 L 201.32 574.6 C 194.12 574.6 189.8 569.8 189.8 562.6 L 189.8 486.76 Z" fill="url(#al)" fill-rule="evenodd"></path><path d="M 270.92 507.88 L 292.52 486.76 L 338.12 532.36 L 520.52 330.76 C 522.44 328.84 524.36 329.8 524.36 333.16 L 524.36 422.44 L 434.6 510.28 L 587.72 510.28 L 521 574.6 L 337.16 574.6 Z" fill="url(#as)" fill-rule="evenodd"></path><path d="M 270.92 507.88 L 292.52 486.76 L 379.4 574.6 L 337.16 574.6 Z" fill="#FFFFFF" fill-rule="evenodd"></path><path d="M 675 267 L 898 267 L 898 315 L 760 460 L 898 460 L 898 518 L 675 518 L 675 471 L 812 326 L 675 326 Z" fill="#FFFFFF" fill-rule="evenodd"></path><path d="M 938 267 L 1001 267 L 1001 518 L 938 518 Z" fill="#FFFFFF" fill-rule="evenodd"></path><path d="M 1009 220 C 1009 241 992 258 970 258 C 948 258 931 241 931 220 C 931 198 948 181 970 181 C 992 181 1009 198 1009 220 Z" fill="#FFFFFF" fill-rule="evenodd"></path><path d="M 1292 407 L 1091 407 C 1098 445 1128 466 1169 466 C 1199 466 1222 455 1240 435 L 1282 475 C 1254 508 1215 525 1167 525 C 1082 525 1028 469 1028 394 C 1028 318 1082 261 1162 261 C 1240 261 1293 315 1293 390 C 1293 396 1293 402 1292 407 Z  M 1091 356 L 1230 356 C 1222 327 1198 312 1163 312 C 1127 312 1101 328 1091 356 Z" fill="#FFFFFF" fill-rule="evenodd"></path><path d="M 1316 267 L 1378 267 L 1378 301 C 1396 276 1423 261 1460 261 L 1460 326 C 1408 322 1378 347 1378 399 L 1378 518 L 1316 518 Z" fill="#FFFFFF" fill-rule="evenodd"></path><path d="M 1482 267 L 1544 267 L 1544 301 C 1563 276 1590 261 1627 261 L 1627 326 C 1575 322 1544 347 1544 399 L 1544 518 L 1482 518 Z" fill="#FFFFFF" fill-rule="evenodd"></path><path d="M 1846 267 L 1908 267 L 1908 518 L 1846 518 L 1846 489 C 1824 513 1795 525 1760 525 C 1687 525 1630 471 1630 393 C 1630 315 1687 261 1760 261 C 1795 261 1825 274 1846 298 Z  M 1693 393 C 1693 437 1724 466 1768 466 C 1812 466 1846 435 1846 393 C 1846 350 1812 320 1768 320 C 1724 320 1693 349 1693 393 Z" fill="#FFFFFF" fill-rule="evenodd"></path></svg><i></i><em>Estudio</em></div>
+      <h2 id="t-zr">Toda tu cartera.<br><span>Un solo cierre.</span></h2>
+      <p class="lead">ZIERRA es la plataforma contable que usamos en PHD, ahora disponible para estudios contables: compras, ventas, SIRE, 621 y libros de todos tus clientes, cuadrados con SUNAT.</p>
+      <ul><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Cierre mensual de toda tu cartera, con tareas y vencimientos SUNAT por cliente.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Cruce con SIRE y validación de comprobantes antes de declarar.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Libros electrónicos, 621 y estados financieros desde los mismos asientos.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.5 4.5L19 7"/></svg><span>Migra tu historia desde CONCAR, Starsoft o Contasis.</span></li></ul>
+      <div class="bts"><a class="btn btn-lima" href="https://zierra.phdconsultores.pe">Ingresar a ZIERRA <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-borde wa" href="#" data-msg="Hola PHD, quiero una demo de ZIERRA para mi estudio.">Solicitar una demo</a></div>
+    </div>
+    <div class="pantalla rv" data-d="1"><div class="barra"><i></i><i></i><i></i><span>zierra.phdconsultores.pe</span></div><img src="img/zierra-login.webp" alt="Pantalla de inicio de sesión de ZIERRA Estudio" width="1440" height="900" loading="lazy"></div>
   </div>
 </section>
 
@@ -647,7 +693,7 @@ footer .legal{font-size:var(--t-s);margin-top:20px;padding-right:72px;display:fl
   <div class="cols">
     <ul><li>Contacto</li><li><a class="wa" href="#" data-msg="Hola PHD, quiero información.">WhatsApp 943 864 787</a></li><li><a href="mailto:info@phdconsultores.pe">info@phdconsultores.pe</a></li><li><a href="https://www.instagram.com/phdconsultores/" target="_blank" rel="noopener">Instagram</a></li><li>Lima, Perú</li><li>Lunes a viernes</li></ul>
     <ul><li>Servicios</li><li><a href="#planes">Planes</a></li><li><a href="/servicios/formalizacion.html">Formalización</a></li><li><a href="/servicios/regularizacion.html">Regularización</a></li><li><a href="/servicios/planillas.html">Planillas</a></li></ul>
-    <ul><li>Recursos</li><li><a href="/herramientas.html">Herramientas</a></li><li><a href="/guias/">Guías</a></li><li><a href="/rubros/">Por rubro</a></li><li><a href="#vencimientos">Vencimientos</a></li></ul>
+    <ul><li>Recursos</li><li><a href="/herramientas.html">Herramientas</a></li><li><a href="/guias/">Guías</a></li><li><a href="/rubros/">Por rubro</a></li><li><a href="#vencimientos">Vencimientos</a></li><li><a href="https://zierra.phdconsultores.pe">ZIERRA · Acceso clientes</a></li></ul>
     <ul><li>Empresa</li><li>PHD CONSULTORES S.A.C.</li><li>RUC 20612286575</li><li><a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a></li></ul>
   </div>
   <div></div>
